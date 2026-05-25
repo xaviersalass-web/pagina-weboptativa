@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paralaje narrativo</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="portada">
+      <div class="portada-fondo" aria-hidden="true">
+        <span class="capa capa-1"></span>
+        <span class="capa capa-2"></span>
+        <span class="capa capa-3"></span>
+      </div>
+      <div class="portada-texto">
+        <p class="etiqueta">Plantilla de scrollytelling</p>
+        <h1>Recomendador de canciones</h1>
+        <p class="bajada">
+          Usa esta estructura cuando quieras que cada tramo de lectura active una vista, una comparación o una capa nueva de información.
+        </p>
+        <p class="meta">Xavier Salas - Fuente de datos - 25 de mayo de 2026</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p class="lead">
+          El paralaje ayuda a convertir una lectura lineal en una experiencia guiada: la persona avanza, el texto marca el ritmo y la visualización responde.
+        </p>
+        <p>
+          Esta plantilla funciona como un punto de partida para historias al estilo scrollytelling. Reemplaza las escenas de ejemplo por mapas, gráficos, ilustraciones, fotografías o componentes hechos con datos.
+        </p>
+      </section>
+
+      <section class="relato" aria-label="Relato con paralaje">
+        <div class="escena" aria-hidden="true">
+          <div class="progreso">
+            <span id="barra-progreso"></span>
+          </div>
+
+          <div class="lienzo" id="lienzo">
+            <div class="sol"></div>
+            <div class="montana montana-fondo"></div>
+            <div class="montana montana-frente"></div>
+
+            <div class="mapa">
+              <span class="zona zona-a"></span>
+              <span class="zona zona-b"></span>
+              <span class="zona zona-c"></span>
+              <span class="punto punto-a"></span>
+              <span class="punto punto-b"></span>
+              <span class="punto punto-c"></span>
+            </div>
+
+            <div class="grafico">
+              <span style="--alto: 34%"></span>
+              <span style="--alto: 58%"></span>
+              <span style="--alto: 76%"></span>
+              <span style="--alto: 46%"></span>
+            </div>
+
+            <div class="rotulo">
+              <p id="rotulo-etapa">Escena 1</p>
+              <strong id="rotulo-titulo">Ubicar el territorio</strong>
+            </div>
+          </div>
+        </div>
+
+        <article class="pasos">
+          <section class="paso activo" data-escena="territorio">
+            <p class="etiqueta">Escena 1</p>
+            <h2>Ubicar el territorio</h2>
+            <p>
+              Empieza con una vista amplia. Antes de mostrar datos complejos, sitúa el lugar, la escala y la pregunta que organiza la historia.
+            </p>
+          </section>
+
+          <section class="paso" data-escena="cambio">
+            <p class="etiqueta">Escena 2</p>
+            <h2>Mostrar el cambio</h2>
+            <p>
+              La segunda escena puede activar una capa temporal: qué aumentó, qué se desplazó, qué aparece o qué desaparece frente al punto de partida.
+            </p>
+          </section>
+
+          <section class="paso" data-escena="contraste">
+            <p class="etiqueta">Escena 3</p>
+            <h2>Comparar casos</h2>
+            <p>
+              Un buen sistema dinámico no solo anima la página. También ayuda a comparar: grupos, barrios, categorías, trayectorias o intensidades.
+            </p>
+          </section>
+
+          <section class="paso" data-escena="detalle">
+            <p class="etiqueta">Escena 4</p>
+            <h2>Acercarse al detalle</h2>
+            <p>
+              Termina con una lectura más precisa. El cierre puede revelar una excepción, una consecuencia o una pregunta que no era visible al comienzo.
+            </p>
+          </section>
+        </article>
+      </section>
+
+      <section class="cierre">
+        <p class="etiqueta">Cierre</p>
+        <h2>Qué debe quedar después del recorrido</h2>
+        <p>
+          Resume la idea central y explica cómo leer el movimiento: qué significa cada transición, qué decisión editorial tomaste y qué límites tienen los datos.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
