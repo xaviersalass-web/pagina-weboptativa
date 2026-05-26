@@ -1,0 +1,57 @@
+{
+  "chart-line": {
+    "headline": "La popularidad media pasó de 49.0 a 43.3 entre 1998 y 2020.",
+    "detail": "El catálogo refleja el auge del streaming: el pico se alcanzó en 2018 (70.5 de popularidad media) y el valle en 2020 (43.3).",
+    "stat": "-11.6% en 20 años",
+    "key_value": -11.6,
+    "extra": [
+      "Pico absoluto: 2018 (70.5)",
+      "Año más flojo: 2020 (43.3)",
+      "23 años con datos"
+    ]
+  },
+  "chart-genre": {
+    "headline": "Pop domina con el 44.0% del catálogo.",
+    "detail": "De 15 géneros etiquetados, los 3 primeros — pop, hip hop y R&B — concentran 77.1% de las canciones populares de las dos décadas.",
+    "stat": "Pop 44.0%",
+    "key_value": 44.0,
+    "extra": [
+      "Pop: 44.0%",
+      "Hip Hop: 21.0%",
+      "R&B: 12.2%"
+    ]
+  },
+  "chart-scatter": {
+    "headline": "Fiesta (alta energía + brillo) es el cuadrante más poblado (57.1%).",
+    "detail": "Cruzando energía con valencia emerge un mapa emocional: la mayoría de hits aterriza en fiesta (alta energía + brillo). Los géneros separan claramente: dance/pop arriba, indie/balada abajo.",
+    "stat": "57.1% en el cuadrante dominante",
+    "key_value": 57.1,
+    "extra": [
+      "Fiesta: 57.1%",
+      "Melancolía: 6.3%",
+      "Calma feliz: 2.7%"
+    ]
+  },
+  "chart-radar": {
+    "headline": "El hit promedio: alta energía (0.72), baja voz hablada (0.10).",
+    "detail": "El perfil sonoro típico de 2000-2020 favorece producciones enérgicas y bailables sobre lo acústico o íntimo. Es el ADN del pop comercial moderno.",
+    "stat": "Energía 0.72",
+    "key_value": 0.722,
+    "extra": [
+      "Bailabilidad: 0.67",
+      "Energía: 0.72",
+      "Valencia: 0.55"
+    ]
+  },
+  "chart-tempo": {
+    "headline": "El 31.7% de los hits viven en el rango 110-130 BPM (movido).",
+    "detail": "El tempo promedio del catálogo es 120.2 BPM — justo en la zona pop comercial. Hay una segunda joroba alrededor de los 75-85 BPM donde anida el R&B y el hip-hop melódico.",
+    "stat": "120.2 BPM promedio",
+    "key_value": 120.2,
+    "extra": [
+      "Lento: 228 canciones",
+      "Medio: 513 canciones",
+      "Movido: 610 canciones"
+    ]
+  }
+}

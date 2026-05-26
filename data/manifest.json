@@ -1,0 +1,16 @@
+{
+  "set_a": {
+    "file": "songs_a.json",
+    "label": "Dataset A",
+    "count": 2000,
+    "year_min": 2000,
+    "year_max": 2019
+  },
+  "set_b": {
+    "file": "songs_b.json",
+    "label": "Dataset B",
+    "count": 2000,
+    "year_min": 1998,
+    "year_max": 2020
+  }
+}

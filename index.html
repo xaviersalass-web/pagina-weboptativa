@@ -3,114 +3,257 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Paralaje narrativo</title>
+    <title>Resonancia · Recomendador de canciones 2000–2020</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Instrument+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js" defer></script>
   </head>
   <body>
+    <div class="aurora" aria-hidden="true">
+      <span class="orbe orbe-1"></span>
+      <span class="orbe orbe-2"></span>
+      <span class="orbe orbe-3"></span>
+    </div>
+
     <header class="portada">
-      <div class="portada-fondo" aria-hidden="true">
-        <span class="capa capa-1"></span>
-        <span class="capa capa-2"></span>
-        <span class="capa capa-3"></span>
-      </div>
+      <nav class="nav glass">
+        <span class="marca"><span class="punto-vivo"></span> Resonancia</span>
+        <div class="nav-links">
+          <a href="#dashboard" data-tab="dashboard">Dashboard</a>
+          <a href="#encuesta" data-tab="encuesta">Encuesta</a>
+          <a href="#quiz" data-tab="quiz">Quiz</a>
+          <a href="#cerebro" data-tab="cerebro">Cerebro</a>
+        </div>
+        <a class="spotify-badge" href="https://developer.spotify.com/documentation/web-api" target="_blank" rel="noopener" title="Datos oficiales de Spotify Web API">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.561.3z"/></svg>
+          Powered by Spotify Web API
+          <span class="ok-dot"></span>
+        </a>
+      </nav>
+
       <div class="portada-texto">
-        <p class="etiqueta">Plantilla de scrollytelling</p>
-        <h1>Recomendador de canciones</h1>
+        <p class="kicker">Veinte años de datos sonoros</p>
+        <h1>Descubre tu <em>canción</em><br>desde los datos.</h1>
         <p class="bajada">
-          Usa esta estructura cuando quieras que cada tramo de lectura active una vista, una comparación o una capa nueva de información.
+          Explora dos décadas de éxitos, compara los resultados de la encuesta y deja
+          que un algoritmo de cinco preguntas te recomiende una canción que coincida con tu energía.
         </p>
-        <p class="meta">Xavier Salas - Fuente de datos - 25 de mayo de 2026</p>
+        <div class="cta">
+          <a class="boton primario" href="#quiz">▶ Empezar el quiz</a>
+          <a class="boton" href="#dashboard">Ver el dashboard ↓</a>
+        </div>
+      </div>
+
+      <div class="stats glass">
+        <div><strong id="stat-a">—</strong><span>Dataset A</span></div>
+        <div><strong id="stat-b">—</strong><span>Dataset B</span></div>
+        <div><strong id="stat-anios">—</strong><span>Años</span></div>
+        <div><strong id="stat-generos">—</strong><span>Géneros</span></div>
       </div>
     </header>
 
     <main>
-      <section class="intro">
-        <p class="lead">
-          El paralaje ayuda a convertir una lectura lineal en una experiencia guiada: la persona avanza, el texto marca el ritmo y la visualización responde.
-        </p>
-        <p>
-          Esta plantilla funciona como un punto de partida para historias al estilo scrollytelling. Reemplaza las escenas de ejemplo por mapas, gráficos, ilustraciones, fotografías o componentes hechos con datos.
-        </p>
-      </section>
-
-      <section class="relato" aria-label="Relato con paralaje">
-        <div class="escena" aria-hidden="true">
-          <div class="progreso">
-            <span id="barra-progreso"></span>
-          </div>
-
-          <div class="lienzo" id="lienzo">
-            <div class="sol"></div>
-            <div class="montana montana-fondo"></div>
-            <div class="montana montana-frente"></div>
-
-            <div class="mapa">
-              <span class="zona zona-a"></span>
-              <span class="zona zona-b"></span>
-              <span class="zona zona-c"></span>
-              <span class="punto punto-a"></span>
-              <span class="punto punto-b"></span>
-              <span class="punto punto-c"></span>
-            </div>
-
-            <div class="grafico">
-              <span style="--alto: 34%"></span>
-              <span style="--alto: 58%"></span>
-              <span style="--alto: 76%"></span>
-              <span style="--alto: 46%"></span>
-            </div>
-
-            <div class="rotulo">
-              <p id="rotulo-etapa">Escena 1</p>
-              <strong id="rotulo-titulo">Ubicar el territorio</strong>
-            </div>
-          </div>
+      <section class="modulo">
+        <div class="tabs glass" role="tablist">
+          <button role="tab" class="tab activa" data-vista="dashboard" id="tab-dashboard">Dashboard</button>
+          <button role="tab" class="tab" data-vista="encuesta" id="tab-encuesta">Encuesta</button>
+          <button role="tab" class="tab" data-vista="quiz" id="tab-quiz">Quiz · Recomendación</button>
+          <button role="tab" class="tab" data-vista="cerebro" id="tab-cerebro">Cerebro sonoro</button>
+          <span class="tab-indicador" aria-hidden="true"></span>
         </div>
 
-        <article class="pasos">
-          <section class="paso activo" data-escena="territorio">
-            <p class="etiqueta">Escena 1</p>
-            <h2>Ubicar el territorio</h2>
-            <p>
-              Empieza con una vista amplia. Antes de mostrar datos complejos, sitúa el lugar, la escala y la pregunta que organiza la historia.
-            </p>
-          </section>
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="vista activa" aria-labelledby="tab-dashboard">
+          <header class="vista-header">
+            <div>
+              <p class="kicker">Sección 01</p>
+              <h2>El paisaje sonoro</h2>
+              <p class="lead">Una exploración interactiva de las canciones más populares entre 2000 y 2020.</p>
+            </div>
+            <div class="toggle-dataset glass" role="group" aria-label="Cambiar dataset">
+              <button class="opt activa" data-set="set_a">Dataset A</button>
+              <button class="opt" data-set="set_b">Dataset B</button>
+              <button class="opt" data-set="both">Ambos</button>
+            </div>
+          </header>
 
-          <section class="paso" data-escena="cambio">
-            <p class="etiqueta">Escena 2</p>
-            <h2>Mostrar el cambio</h2>
-            <p>
-              La segunda escena puede activar una capa temporal: qué aumentó, qué se desplazó, qué aparece o qué desaparece frente al punto de partida.
-            </p>
-          </section>
+          <div class="rejilla">
+            <article class="tarjeta glass amplia" data-insight="chart-line" tabindex="0">
+              <header><h3>Popularidad media por año</h3><p>Cómo evolucionó la popularidad de los hits.</p></header>
+              <div class="chart" id="chart-line"></div>
+              <div class="insight-overlay"></div>
+            </article>
 
-          <section class="paso" data-escena="contraste">
-            <p class="etiqueta">Escena 3</p>
-            <h2>Comparar casos</h2>
-            <p>
-              Un buen sistema dinámico no solo anima la página. También ayuda a comparar: grupos, barrios, categorías, trayectorias o intensidades.
-            </p>
-          </section>
+            <article class="tarjeta glass" data-insight="chart-genre" tabindex="0">
+              <header><h3>Géneros principales</h3><p>Top 8 géneros en el catálogo.</p></header>
+              <div class="chart" id="chart-genre"></div>
+              <div class="insight-overlay"></div>
+            </article>
 
-          <section class="paso" data-escena="detalle">
-            <p class="etiqueta">Escena 4</p>
-            <h2>Acercarse al detalle</h2>
-            <p>
-              Termina con una lectura más precisa. El cierre puede revelar una excepción, una consecuencia o una pregunta que no era visible al comienzo.
-            </p>
-          </section>
-        </article>
+            <article class="tarjeta glass" data-insight="chart-scatter" tabindex="0">
+              <header><h3>Energía vs. Valencia</h3><p>Cada punto es una canción. Color: género.</p></header>
+              <div class="chart" id="chart-scatter"></div>
+              <div class="insight-overlay"></div>
+            </article>
+
+            <article class="tarjeta glass amplia" data-insight="chart-radar" tabindex="0">
+              <header><h3>Perfil sonoro promedio</h3><p>Características de audio típicas del dataset.</p></header>
+              <div class="chart" id="chart-radar"></div>
+              <div class="insight-overlay"></div>
+            </article>
+
+            <article class="tarjeta glass" data-insight="chart-tempo" tabindex="0">
+              <header><h3>Tempo (BPM)</h3><p>Distribución de velocidad.</p></header>
+              <div class="chart" id="chart-tempo"></div>
+              <div class="insight-overlay"></div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ENCUESTA -->
+        <section id="encuesta" class="vista" aria-labelledby="tab-encuesta" hidden>
+          <header class="vista-header">
+            <div>
+              <p class="kicker">Sección 02</p>
+              <h2>La encuesta</h2>
+              <p class="lead">142 personas respondieron qué buscan en una canción. Esto es lo que dijeron.</p>
+            </div>
+            <span class="badge glass">n = 142 · mayo 2026</span>
+          </header>
+
+          <div class="rejilla">
+            <article class="tarjeta glass">
+              <header><h3>¿Qué te hace volver a una canción?</h3></header>
+              <div class="chart" id="chart-poll-1"></div>
+            </article>
+
+            <article class="tarjeta glass">
+              <header><h3>Estado de ánimo favorito al escuchar música</h3></header>
+              <div class="chart" id="chart-poll-2"></div>
+            </article>
+
+            <article class="tarjeta glass">
+              <header><h3>Década preferida</h3></header>
+              <div class="chart" id="chart-poll-3"></div>
+            </article>
+
+            <article class="tarjeta glass amplia">
+              <header><h3>Importancia de cada atributo (1 a 5)</h3></header>
+              <div class="chart" id="chart-poll-4"></div>
+            </article>
+          </div>
+        </section>
+
+        <!-- QUIZ -->
+        <section id="quiz" class="vista" aria-labelledby="tab-quiz" hidden>
+          <header class="vista-header">
+            <div>
+              <p class="kicker">Sección 03</p>
+              <h2>Tu canción, en 5 preguntas</h2>
+              <p class="lead">Cada respuesta ajusta un vector sonoro. Comparamos con las 4.000 canciones y te devolvemos la más cercana.</p>
+            </div>
+          </header>
+
+          <div class="quiz-wrap glass">
+            <div class="quiz-progreso"><span id="quiz-bar"></span></div>
+            <div id="quiz-content" aria-live="polite"></div>
+            <div class="quiz-nav">
+              <button id="quiz-back" class="boton" disabled>← Atrás</button>
+              <span class="quiz-paso"><strong id="quiz-paso">1</strong> / 5</span>
+              <button id="quiz-next" class="boton primario">Siguiente →</button>
+            </div>
+          </div>
+
+          <article id="resultado" class="tarjeta glass resultado" hidden>
+            <p class="kicker">Tu match</p>
+            <h3 id="res-song">—</h3>
+            <p class="res-artist" id="res-artist">—</p>
+            <div class="res-meta">
+              <span id="res-year"></span>
+              <span id="res-genre"></span>
+              <span id="res-pop"></span>
+            </div>
+            <div class="res-feats" id="res-feats"></div>
+
+            <div class="res-por-que">
+              <p class="kicker">Por qué esta canción</p>
+              <p id="res-explicacion">—</p>
+            </div>
+
+            <div class="res-servicios">
+              <a class="servicio spotify" id="res-spotify" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.561.3z"/></svg>
+                Escuchar en Spotify
+              </a>
+              <a class="servicio apple" id="res-apple" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M23.997 6.124c0-.738-.065-1.47-.24-2.19-.317-1.31-1.062-2.31-2.18-3.043C21.003.517 20.373.285 19.703.164c-.517-.093-1.038-.135-1.563-.15-.04-.003-.082-.009-.123-.014H5.988c-.152.01-.303.017-.455.026C4.786.07 4.043.15 3.34.428 2.004.958 1.04 1.88.475 3.208c-.192.448-.292.925-.363 1.408-.056.392-.088.785-.097 1.18 0 .032-.006.063-.01.095v12.224c.012.16.02.318.034.477.04.482.108.96.276 1.416.53 1.435 1.504 2.418 2.943 2.954.42.156.86.227 1.305.272.555.057 1.11.07 1.666.07h11.564c.526 0 1.052-.034 1.573-.122.798-.135 1.526-.422 2.158-.92.81-.633 1.343-1.45 1.642-2.43.156-.515.246-1.045.27-1.58.024-.5.025-1 .025-1.5V6.124zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536-.143-.78.232-1.614 1.07-2.04.395-.2.823-.31 1.26-.376.476-.07.952-.13 1.422-.223.346-.066.628-.247.844-.527v-.5c0-.13-.014-.26-.027-.39-.022-.18-.108-.31-.265-.39-.124-.06-.255-.078-.39-.078-.625.005-1.226-.097-1.793-.39-.275-.142-.484-.358-.605-.673-.13-.336-.198-.7-.198-1.07-.005-.7-.006-1.36-.005-2.05V8.34c0-.43-.107-.83-.36-1.17-.165-.218-.39-.358-.65-.43-.18-.05-.36-.07-.55-.07h-3.16c-.16 0-.32.02-.476.072-.336.117-.55.357-.633.7-.04.165-.067.336-.067.51-.005.747-.005 1.494-.006 2.242 0 .394-.084.766-.346 1.082-.244.293-.563.443-.95.443h-.7c-.16 0-.31-.04-.45-.122-.275-.16-.464-.396-.55-.706-.043-.16-.06-.32-.06-.484V8.16c0-.27.014-.54.057-.808.122-.78.5-1.39 1.158-1.83.396-.265.84-.396 1.305-.45.347-.04.694-.05 1.043-.05h5.55c.392 0 .785.018 1.175.07.71.094 1.357.354 1.873.856.395.385.642.85.745 1.385.07.36.094.728.094 1.094.005 1.42.003 2.84-.005 4.26z"/></svg>
+                Apple Music
+              </a>
+              <div class="res-scan" title="Escanea con la cámara de Spotify">
+                <img id="res-qr" alt="Código para escanear" loading="lazy">
+                <span>Scan</span>
+              </div>
+            </div>
+
+            <div class="res-acciones">
+              <button class="boton" id="res-otra">↻ Probar otra vez</button>
+              <button class="boton" id="res-otra-cancion">Otra recomendación</button>
+            </div>
+          </article>
+        </section>
+
+        <!-- CEREBRO SONORO -->
+        <section id="cerebro" class="vista" aria-labelledby="tab-cerebro" hidden>
+          <header class="vista-header">
+            <div>
+              <p class="kicker">Sección 04 · experimental</p>
+              <h2>El cerebro sonoro</h2>
+              <p class="lead">
+                Una red estilo Obsidian: <strong>géneros</strong> conectan a <strong>artistas</strong>,
+                que conectan a sus <strong>canciones</strong>, que conectan con sus vecinos sonoros más cercanos.
+                Pasa el cursor para iluminar el vecindario, arrastra los nodos, haz click para detalles.
+              </p>
+            </div>
+            <span class="spotify-badge" title="Datos oficiales de Spotify Web API">
+              <span class="ok-dot"></span> Data: Spotify Web API
+            </span>
+          </header>
+
+          <div class="cerebro-wrap">
+            <div class="brain-leyenda">
+              <h4>Leyenda</h4>
+              <div class="leg-row"><span class="leg-dot" style="background:#6fe0d0;color:#6fe0d0"></span> Género</div>
+              <div class="leg-row"><span class="leg-dot" style="background:#1ed760;color:#1ed760"></span> Artista</div>
+              <div class="leg-row"><span class="leg-dot" style="background:#ffd166;color:#ffd166"></span> Canción</div>
+            </div>
+            <div id="chart-brain"></div>
+            <div class="brain-ayuda">
+              <kbd>Drag</kbd> mover · <kbd>Scroll</kbd> zoom · <kbd>Hover</kbd> vecindario
+            </div>
+          </div>
+        </section>
       </section>
 
-      <section class="cierre">
-        <p class="etiqueta">Cierre</p>
-        <h2>Qué debe quedar después del recorrido</h2>
+      <footer class="cierre">
+        <p class="kicker">Cierre</p>
         <p>
-          Resume la idea central y explica cómo leer el movimiento: qué significa cada transición, qué decisión editorial tomaste y qué límites tienen los datos.
+          Diseño Spotify-dark + liquid glass. Visualizaciones con ECharts.
+          Algoritmo de recomendación por distancia euclídea en cinco rasgos:
+          bailabilidad, energía, valencia, tempo y género.
         </p>
-      </section>
+        <div style="display:flex; justify-content:center; gap:0.5rem; flex-wrap:wrap; margin-top:1.25rem">
+          <a class="spotify-badge" href="https://developer.spotify.com/documentation/web-api" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.561.3z"/></svg>
+            Audio features oficiales de Spotify
+            <span class="ok-dot"></span>
+          </a>
+        </div>
+        <p class="meta">Xavier Salas · 2026</p>
+      </footer>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

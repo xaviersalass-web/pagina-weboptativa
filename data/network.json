@@ -1,0 +1,3411 @@
+{
+  "categories": [
+    {
+      "name": "Género",
+      "color": "#6fe0d0"
+    },
+    {
+      "name": "Artista",
+      "color": "#1ed760"
+    },
+    {
+      "name": "Canción",
+      "color": "#ffd166"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "genre:pop",
+      "name": "pop",
+      "category": 0,
+      "symbolSize": 60.0,
+      "value": 1567,
+      "meta": {
+        "type": "genre",
+        "count": 1567
+      }
+    },
+    {
+      "id": "genre:hip hop",
+      "name": "hip hop",
+      "category": 0,
+      "symbolSize": 47.4,
+      "value": 746,
+      "meta": {
+        "type": "genre",
+        "count": 746
+      }
+    },
+    {
+      "id": "genre:Dance/Electronic",
+      "name": "Dance/Electronic",
+      "category": 0,
+      "symbolSize": 41.8,
+      "value": 376,
+      "meta": {
+        "type": "genre",
+        "count": 376
+      }
+    },
+    {
+      "id": "genre:rock",
+      "name": "rock",
+      "category": 0,
+      "symbolSize": 39.4,
+      "value": 225,
+      "meta": {
+        "type": "genre",
+        "count": 225
+      }
+    },
+    {
+      "id": "genre:metal",
+      "name": "metal",
+      "category": 0,
+      "symbolSize": 37.0,
+      "value": 64,
+      "meta": {
+        "type": "genre",
+        "count": 64
+      }
+    },
+    {
+      "id": "artist:Rihanna",
+      "name": "Rihanna",
+      "category": 1,
+      "symbolSize": 32.0,
+      "value": 1662,
+      "meta": {
+        "type": "artist",
+        "songs": 23,
+        "avg_popularity": 72.3,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Eminem",
+      "name": "Eminem",
+      "category": 1,
+      "symbolSize": 30.4,
+      "value": 1471,
+      "meta": {
+        "type": "artist",
+        "songs": 20,
+        "avg_popularity": 73.5,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Drake",
+      "name": "Drake",
+      "category": 1,
+      "symbolSize": 30.0,
+      "value": 1424,
+      "meta": {
+        "type": "artist",
+        "songs": 21,
+        "avg_popularity": 67.8,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Calvin Harris",
+      "name": "Calvin Harris",
+      "category": 1,
+      "symbolSize": 29.4,
+      "value": 1356,
+      "meta": {
+        "type": "artist",
+        "songs": 20,
+        "avg_popularity": 67.8,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Britney Spears",
+      "name": "Britney Spears",
+      "category": 1,
+      "symbolSize": 28.1,
+      "value": 1198,
+      "meta": {
+        "type": "artist",
+        "songs": 19,
+        "avg_popularity": 63.1,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:David Guetta",
+      "name": "David Guetta",
+      "category": 1,
+      "symbolSize": 28.0,
+      "value": 1185,
+      "meta": {
+        "type": "artist",
+        "songs": 18,
+        "avg_popularity": 65.8,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Katy Perry",
+      "name": "Katy Perry",
+      "category": 1,
+      "symbolSize": 26.7,
+      "value": 1033,
+      "meta": {
+        "type": "artist",
+        "songs": 16,
+        "avg_popularity": 64.6,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Beyoncé",
+      "name": "Beyoncé",
+      "category": 1,
+      "symbolSize": 26.7,
+      "value": 1030,
+      "meta": {
+        "type": "artist",
+        "songs": 16,
+        "avg_popularity": 64.4,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Chris Brown",
+      "name": "Chris Brown",
+      "category": 1,
+      "symbolSize": 26.5,
+      "value": 1012,
+      "meta": {
+        "type": "artist",
+        "songs": 16,
+        "avg_popularity": 63.2,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Kanye West",
+      "name": "Kanye West",
+      "category": 1,
+      "symbolSize": 26.3,
+      "value": 983,
+      "meta": {
+        "type": "artist",
+        "songs": 16,
+        "avg_popularity": 61.4,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Taylor Swift",
+      "name": "Taylor Swift",
+      "category": 1,
+      "symbolSize": 26.0,
+      "value": 951,
+      "meta": {
+        "type": "artist",
+        "songs": 13,
+        "avg_popularity": 73.2,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Black Eyed Peas",
+      "name": "Black Eyed Peas",
+      "category": 1,
+      "symbolSize": 25.7,
+      "value": 917,
+      "meta": {
+        "type": "artist",
+        "songs": 14,
+        "avg_popularity": 65.5,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Bruno Mars",
+      "name": "Bruno Mars",
+      "category": 1,
+      "symbolSize": 25.2,
+      "value": 853,
+      "meta": {
+        "type": "artist",
+        "songs": 11,
+        "avg_popularity": 77.5,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Coldplay",
+      "name": "Coldplay",
+      "category": 1,
+      "symbolSize": 24.9,
+      "value": 818,
+      "meta": {
+        "type": "artist",
+        "songs": 11,
+        "avg_popularity": 74.4,
+        "top_genre": "rock"
+      }
+    },
+    {
+      "id": "artist:JAY-Z",
+      "name": "JAY-Z",
+      "category": 1,
+      "symbolSize": 24.8,
+      "value": 813,
+      "meta": {
+        "type": "artist",
+        "songs": 12,
+        "avg_popularity": 67.8,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Justin Timberlake",
+      "name": "Justin Timberlake",
+      "category": 1,
+      "symbolSize": 24.5,
+      "value": 775,
+      "meta": {
+        "type": "artist",
+        "songs": 11,
+        "avg_popularity": 70.5,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Lady Gaga",
+      "name": "Lady Gaga",
+      "category": 1,
+      "symbolSize": 24.1,
+      "value": 729,
+      "meta": {
+        "type": "artist",
+        "songs": 10,
+        "avg_popularity": 72.9,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Maroon 5",
+      "name": "Maroon 5",
+      "category": 1,
+      "symbolSize": 24.1,
+      "value": 725,
+      "meta": {
+        "type": "artist",
+        "songs": 13,
+        "avg_popularity": 55.8,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Usher",
+      "name": "Usher",
+      "category": 1,
+      "symbolSize": 24.1,
+      "value": 719,
+      "meta": {
+        "type": "artist",
+        "songs": 11,
+        "avg_popularity": 65.4,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Nelly",
+      "name": "Nelly",
+      "category": 1,
+      "symbolSize": 24.0,
+      "value": 716,
+      "meta": {
+        "type": "artist",
+        "songs": 11,
+        "avg_popularity": 65.1,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Flo Rida",
+      "name": "Flo Rida",
+      "category": 1,
+      "symbolSize": 24.0,
+      "value": 712,
+      "meta": {
+        "type": "artist",
+        "songs": 10,
+        "avg_popularity": 71.2,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:P!nk",
+      "name": "P!nk",
+      "category": 1,
+      "symbolSize": 24.0,
+      "value": 708,
+      "meta": {
+        "type": "artist",
+        "songs": 14,
+        "avg_popularity": 50.6,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Jason Derulo",
+      "name": "Jason Derulo",
+      "category": 1,
+      "symbolSize": 23.9,
+      "value": 698,
+      "meta": {
+        "type": "artist",
+        "songs": 11,
+        "avg_popularity": 63.5,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Ariana Grande",
+      "name": "Ariana Grande",
+      "category": 1,
+      "symbolSize": 23.8,
+      "value": 685,
+      "meta": {
+        "type": "artist",
+        "songs": 13,
+        "avg_popularity": 52.7,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Ed Sheeran",
+      "name": "Ed Sheeran",
+      "category": 1,
+      "symbolSize": 23.5,
+      "value": 655,
+      "meta": {
+        "type": "artist",
+        "songs": 9,
+        "avg_popularity": 72.8,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Pitbull",
+      "name": "Pitbull",
+      "category": 1,
+      "symbolSize": 23.5,
+      "value": 649,
+      "meta": {
+        "type": "artist",
+        "songs": 9,
+        "avg_popularity": 72.1,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:50 Cent",
+      "name": "50 Cent",
+      "category": 1,
+      "symbolSize": 23.4,
+      "value": 640,
+      "meta": {
+        "type": "artist",
+        "songs": 9,
+        "avg_popularity": 71.1,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Avril Lavigne",
+      "name": "Avril Lavigne",
+      "category": 1,
+      "symbolSize": 23.3,
+      "value": 627,
+      "meta": {
+        "type": "artist",
+        "songs": 10,
+        "avg_popularity": 62.7,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:One Direction",
+      "name": "One Direction",
+      "category": 1,
+      "symbolSize": 23.2,
+      "value": 623,
+      "meta": {
+        "type": "artist",
+        "songs": 9,
+        "avg_popularity": 69.2,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Sean Paul",
+      "name": "Sean Paul",
+      "category": 1,
+      "symbolSize": 23.1,
+      "value": 611,
+      "meta": {
+        "type": "artist",
+        "songs": 9,
+        "avg_popularity": 67.9,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Nickelback",
+      "name": "Nickelback",
+      "category": 1,
+      "symbolSize": 23.1,
+      "value": 610,
+      "meta": {
+        "type": "artist",
+        "songs": 9,
+        "avg_popularity": 67.8,
+        "top_genre": "rock"
+      }
+    },
+    {
+      "id": "artist:Linkin Park",
+      "name": "Linkin Park",
+      "category": 1,
+      "symbolSize": 23.0,
+      "value": 595,
+      "meta": {
+        "type": "artist",
+        "songs": 8,
+        "avg_popularity": 74.4,
+        "top_genre": "rock"
+      }
+    },
+    {
+      "id": "artist:Destiny's Child",
+      "name": "Destiny's Child",
+      "category": 1,
+      "symbolSize": 22.9,
+      "value": 581,
+      "meta": {
+        "type": "artist",
+        "songs": 9,
+        "avg_popularity": 64.6,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Avicii",
+      "name": "Avicii",
+      "category": 1,
+      "symbolSize": 22.8,
+      "value": 571,
+      "meta": {
+        "type": "artist",
+        "songs": 10,
+        "avg_popularity": 57.1,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Post Malone",
+      "name": "Post Malone",
+      "category": 1,
+      "symbolSize": 22.8,
+      "value": 565,
+      "meta": {
+        "type": "artist",
+        "songs": 8,
+        "avg_popularity": 70.6,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Ne-Yo",
+      "name": "Ne-Yo",
+      "category": 1,
+      "symbolSize": 22.6,
+      "value": 542,
+      "meta": {
+        "type": "artist",
+        "songs": 8,
+        "avg_popularity": 67.8,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:The Chainsmokers",
+      "name": "The Chainsmokers",
+      "category": 1,
+      "symbolSize": 22.5,
+      "value": 533,
+      "meta": {
+        "type": "artist",
+        "songs": 8,
+        "avg_popularity": 66.6,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:OneRepublic",
+      "name": "OneRepublic",
+      "category": 1,
+      "symbolSize": 22.4,
+      "value": 525,
+      "meta": {
+        "type": "artist",
+        "songs": 8,
+        "avg_popularity": 65.6,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Ludacris",
+      "name": "Ludacris",
+      "category": 1,
+      "symbolSize": 22.4,
+      "value": 522,
+      "meta": {
+        "type": "artist",
+        "songs": 9,
+        "avg_popularity": 58.0,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Enrique Iglesias",
+      "name": "Enrique Iglesias",
+      "category": 1,
+      "symbolSize": 22.4,
+      "value": 522,
+      "meta": {
+        "type": "artist",
+        "songs": 9,
+        "avg_popularity": 58.0,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:The Neighbourhood",
+      "name": "The Neighbourhood",
+      "category": 1,
+      "symbolSize": 19.5,
+      "value": 174,
+      "meta": {
+        "type": "artist",
+        "songs": 2,
+        "avg_popularity": 87.0,
+        "top_genre": "rock"
+      }
+    },
+    {
+      "id": "artist:Tom Odell",
+      "name": "Tom Odell",
+      "category": 1,
+      "symbolSize": 18.7,
+      "value": 88,
+      "meta": {
+        "type": "artist",
+        "songs": 1,
+        "avg_popularity": 88.0,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Billie Eilish",
+      "name": "Billie Eilish",
+      "category": 1,
+      "symbolSize": 20.8,
+      "value": 328,
+      "meta": {
+        "type": "artist",
+        "songs": 4,
+        "avg_popularity": 82.0,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:WILLOW",
+      "name": "WILLOW",
+      "category": 1,
+      "symbolSize": 18.7,
+      "value": 86,
+      "meta": {
+        "type": "artist",
+        "songs": 1,
+        "avg_popularity": 86.0,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:John Legend",
+      "name": "John Legend",
+      "category": 1,
+      "symbolSize": 19.2,
+      "value": 139,
+      "meta": {
+        "type": "artist",
+        "songs": 2,
+        "avg_popularity": 69.5,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Lewis Capaldi",
+      "name": "Lewis Capaldi",
+      "category": 1,
+      "symbolSize": 18.7,
+      "value": 84,
+      "meta": {
+        "type": "artist",
+        "songs": 1,
+        "avg_popularity": 84.0,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Arctic Monkeys",
+      "name": "Arctic Monkeys",
+      "category": 1,
+      "symbolSize": 21.2,
+      "value": 378,
+      "meta": {
+        "type": "artist",
+        "songs": 5,
+        "avg_popularity": 75.6,
+        "top_genre": "rock"
+      }
+    },
+    {
+      "id": "artist:The Weeknd",
+      "name": "The Weeknd",
+      "category": 1,
+      "symbolSize": 21.9,
+      "value": 466,
+      "meta": {
+        "type": "artist",
+        "songs": 8,
+        "avg_popularity": 58.2,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Juice WRLD",
+      "name": "Juice WRLD",
+      "category": 1,
+      "symbolSize": 19.2,
+      "value": 137,
+      "meta": {
+        "type": "artist",
+        "songs": 2,
+        "avg_popularity": 68.5,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Gesaffelstein",
+      "name": "Gesaffelstein",
+      "category": 1,
+      "symbolSize": 18.7,
+      "value": 84,
+      "meta": {
+        "type": "artist",
+        "songs": 1,
+        "avg_popularity": 84.0,
+        "top_genre": "Dance/Electronic"
+      }
+    },
+    {
+      "id": "artist:Daft Punk",
+      "name": "Daft Punk",
+      "category": 1,
+      "symbolSize": 19.9,
+      "value": 228,
+      "meta": {
+        "type": "artist",
+        "songs": 3,
+        "avg_popularity": 76.0,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Twenty One Pilots",
+      "name": "Twenty One Pilots",
+      "category": 1,
+      "symbolSize": 20.0,
+      "value": 243,
+      "meta": {
+        "type": "artist",
+        "songs": 3,
+        "avg_popularity": 81.0,
+        "top_genre": "rock"
+      }
+    },
+    {
+      "id": "artist:Tame Impala",
+      "name": "Tame Impala",
+      "category": 1,
+      "symbolSize": 18.7,
+      "value": 83,
+      "meta": {
+        "type": "artist",
+        "songs": 1,
+        "avg_popularity": 83.0,
+        "top_genre": "metal"
+      }
+    },
+    {
+      "id": "artist:Travis Scott",
+      "name": "Travis Scott",
+      "category": 1,
+      "symbolSize": 20.0,
+      "value": 237,
+      "meta": {
+        "type": "artist",
+        "songs": 4,
+        "avg_popularity": 59.2,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:XXXTENTACION",
+      "name": "XXXTENTACION",
+      "category": 1,
+      "symbolSize": 20.7,
+      "value": 326,
+      "meta": {
+        "type": "artist",
+        "songs": 4,
+        "avg_popularity": 81.5,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Nelly Furtado",
+      "name": "Nelly Furtado",
+      "category": 1,
+      "symbolSize": 20.1,
+      "value": 244,
+      "meta": {
+        "type": "artist",
+        "songs": 5,
+        "avg_popularity": 48.8,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Mark Ronson",
+      "name": "Mark Ronson",
+      "category": 1,
+      "symbolSize": 19.7,
+      "value": 207,
+      "meta": {
+        "type": "artist",
+        "songs": 4,
+        "avg_popularity": 51.8,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Dr. Dre",
+      "name": "Dr. Dre",
+      "category": 1,
+      "symbolSize": 20.0,
+      "value": 232,
+      "meta": {
+        "type": "artist",
+        "songs": 3,
+        "avg_popularity": 77.3,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Outkast",
+      "name": "Outkast",
+      "category": 1,
+      "symbolSize": 20.4,
+      "value": 279,
+      "meta": {
+        "type": "artist",
+        "songs": 4,
+        "avg_popularity": 69.8,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Gorillaz",
+      "name": "Gorillaz",
+      "category": 1,
+      "symbolSize": 19.9,
+      "value": 229,
+      "meta": {
+        "type": "artist",
+        "songs": 3,
+        "avg_popularity": 76.3,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Shakira",
+      "name": "Shakira",
+      "category": 1,
+      "symbolSize": 21.0,
+      "value": 360,
+      "meta": {
+        "type": "artist",
+        "songs": 5,
+        "avg_popularity": 72.0,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Foster The People",
+      "name": "Foster The People",
+      "category": 1,
+      "symbolSize": 18.7,
+      "value": 82,
+      "meta": {
+        "type": "artist",
+        "songs": 1,
+        "avg_popularity": 82.0,
+        "top_genre": "rock"
+      }
+    },
+    {
+      "id": "artist:MKTO",
+      "name": "MKTO",
+      "category": 1,
+      "symbolSize": 18.7,
+      "value": 82,
+      "meta": {
+        "type": "artist",
+        "songs": 1,
+        "avg_popularity": 82.0,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:Shawn Mendes",
+      "name": "Shawn Mendes",
+      "category": 1,
+      "symbolSize": 20.6,
+      "value": 311,
+      "meta": {
+        "type": "artist",
+        "songs": 6,
+        "avg_popularity": 51.8,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:French Montana",
+      "name": "French Montana",
+      "category": 1,
+      "symbolSize": 18.7,
+      "value": 82,
+      "meta": {
+        "type": "artist",
+        "songs": 1,
+        "avg_popularity": 82.0,
+        "top_genre": "hip hop"
+      }
+    },
+    {
+      "id": "artist:girl in red",
+      "name": "girl in red",
+      "category": 1,
+      "symbolSize": 18.7,
+      "value": 82,
+      "meta": {
+        "type": "artist",
+        "songs": 1,
+        "avg_popularity": 82.0,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "artist:Marshmello",
+      "name": "Marshmello",
+      "category": 1,
+      "symbolSize": 21.8,
+      "value": 455,
+      "meta": {
+        "type": "artist",
+        "songs": 6,
+        "avg_popularity": 75.8,
+        "top_genre": "pop"
+      }
+    },
+    {
+      "id": "song:The Neighbourhood|Sweater Weather",
+      "name": "Sweater Weather",
+      "category": 2,
+      "symbolSize": 16.0,
+      "value": 89,
+      "meta": {
+        "type": "song",
+        "artist": "The Neighbourhood",
+        "year": 2013,
+        "popularity": 89,
+        "genres": [
+          "rock",
+          "pop"
+        ],
+        "tempo": 124.053,
+        "energy": 0.807,
+        "valence": 0.398,
+        "danceability": 0.612
+      }
+    },
+    {
+      "id": "song:Tom Odell|Another Love",
+      "name": "Another Love",
+      "category": 2,
+      "symbolSize": 15.9,
+      "value": 88,
+      "meta": {
+        "type": "song",
+        "artist": "Tom Odell",
+        "year": 2013,
+        "popularity": 88,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 122.769,
+        "energy": 0.537,
+        "valence": 0.131,
+        "danceability": 0.445
+      }
+    },
+    {
+      "id": "song:Eminem|Without Me",
+      "name": "Without Me",
+      "category": 2,
+      "symbolSize": 15.9,
+      "value": 87,
+      "meta": {
+        "type": "song",
+        "artist": "Eminem",
+        "year": 2002,
+        "popularity": 87,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 112.238,
+        "energy": 0.669,
+        "valence": 0.662,
+        "danceability": 0.908
+      }
+    },
+    {
+      "id": "song:Eminem|The Real Slim Shady",
+      "name": "The Real Slim Shady",
+      "category": 2,
+      "symbolSize": 15.8,
+      "value": 86,
+      "meta": {
+        "type": "song",
+        "artist": "Eminem",
+        "year": 2000,
+        "popularity": 86,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 104.504,
+        "energy": 0.661,
+        "valence": 0.76,
+        "danceability": 0.949
+      }
+    },
+    {
+      "id": "song:Billie Eilish|lovely (with Khalid)",
+      "name": "lovely (with Khalid)",
+      "category": 2,
+      "symbolSize": 15.8,
+      "value": 86,
+      "meta": {
+        "type": "song",
+        "artist": "Billie Eilish",
+        "year": 2018,
+        "popularity": 86,
+        "genres": [
+          "pop",
+          "Dance/Electronic"
+        ],
+        "tempo": 115.284,
+        "energy": 0.296,
+        "valence": 0.12,
+        "danceability": 0.351
+      }
+    },
+    {
+      "id": "song:WILLOW|Wait a Minute!",
+      "name": "Wait a Minute!",
+      "category": 2,
+      "symbolSize": 15.8,
+      "value": 86,
+      "meta": {
+        "type": "song",
+        "artist": "WILLOW",
+        "year": 2015,
+        "popularity": 86,
+        "genres": [
+          "pop",
+          "R&B",
+          "Dance/Electronic"
+        ],
+        "tempo": 101.003,
+        "energy": 0.705,
+        "valence": 0.672,
+        "danceability": 0.764
+      }
+    },
+    {
+      "id": "song:Ed Sheeran|Perfect",
+      "name": "Perfect",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 85,
+      "meta": {
+        "type": "song",
+        "artist": "Ed Sheeran",
+        "year": 2017,
+        "popularity": 85,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 95.05,
+        "energy": 0.448,
+        "valence": 0.168,
+        "danceability": 0.599
+      }
+    },
+    {
+      "id": "song:Eminem|'Till I Collapse",
+      "name": "'Till I Collapse",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 85,
+      "meta": {
+        "type": "song",
+        "artist": "Eminem",
+        "year": 2002,
+        "popularity": 85,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 171.447,
+        "energy": 0.847,
+        "valence": 0.1,
+        "danceability": 0.548
+      }
+    },
+    {
+      "id": "song:Bruno Mars|Locked out of Heaven",
+      "name": "Locked out of Heaven",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 85,
+      "meta": {
+        "type": "song",
+        "artist": "Bruno Mars",
+        "year": 2012,
+        "popularity": 85,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 143.994,
+        "energy": 0.698,
+        "valence": 0.867,
+        "danceability": 0.726
+      }
+    },
+    {
+      "id": "song:The Neighbourhood|Daddy Issues",
+      "name": "Daddy Issues",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 85,
+      "meta": {
+        "type": "song",
+        "artist": "The Neighbourhood",
+        "year": 2015,
+        "popularity": 85,
+        "genres": [
+          "rock",
+          "pop"
+        ],
+        "tempo": 85.012,
+        "energy": 0.521,
+        "valence": 0.337,
+        "danceability": 0.588
+      }
+    },
+    {
+      "id": "song:Avicii|The Nights",
+      "name": "The Nights",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 85,
+      "meta": {
+        "type": "song",
+        "artist": "Avicii",
+        "year": 2014,
+        "popularity": 85,
+        "genres": [
+          "pop",
+          "Dance/Electronic"
+        ],
+        "tempo": 125.983,
+        "energy": 0.835,
+        "valence": 0.654,
+        "danceability": 0.527
+      }
+    },
+    {
+      "id": "song:Post Malone|Circles",
+      "name": "Circles",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 85,
+      "meta": {
+        "type": "song",
+        "artist": "Post Malone",
+        "year": 2019,
+        "popularity": 85,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 120.042,
+        "energy": 0.762,
+        "valence": 0.553,
+        "danceability": 0.695
+      }
+    },
+    {
+      "id": "song:John Legend|All of Me",
+      "name": "All of Me",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 84,
+      "meta": {
+        "type": "song",
+        "artist": "John Legend",
+        "year": 2013,
+        "popularity": 84,
+        "genres": [
+          "pop",
+          "R&B"
+        ],
+        "tempo": 119.93,
+        "energy": 0.264,
+        "valence": 0.331,
+        "danceability": 0.422
+      }
+    },
+    {
+      "id": "song:Lewis Capaldi|Someone You Loved",
+      "name": "Someone You Loved",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 84,
+      "meta": {
+        "type": "song",
+        "artist": "Lewis Capaldi",
+        "year": 2019,
+        "popularity": 84,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 109.891,
+        "energy": 0.405,
+        "valence": 0.446,
+        "danceability": 0.501
+      }
+    },
+    {
+      "id": "song:Arctic Monkeys|Why'd You Only Call Me When You're High?",
+      "name": "Why'd You Only Call Me When You're High?",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 84,
+      "meta": {
+        "type": "song",
+        "artist": "Arctic Monkeys",
+        "year": 2013,
+        "popularity": 84,
+        "genres": [
+          "rock"
+        ],
+        "tempo": 92.004,
+        "energy": 0.631,
+        "valence": 0.8,
+        "danceability": 0.691
+      }
+    },
+    {
+      "id": "song:Arctic Monkeys|Do I Wanna Know?",
+      "name": "Do I Wanna Know?",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 84,
+      "meta": {
+        "type": "song",
+        "artist": "Arctic Monkeys",
+        "year": 2013,
+        "popularity": 84,
+        "genres": [
+          "rock"
+        ],
+        "tempo": 85.03,
+        "energy": 0.532,
+        "valence": 0.405,
+        "danceability": 0.548
+      }
+    },
+    {
+      "id": "song:The Weeknd|The Hills",
+      "name": "The Hills",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 84,
+      "meta": {
+        "type": "song",
+        "artist": "The Weeknd",
+        "year": 2015,
+        "popularity": 84,
+        "genres": [
+          "pop",
+          "R&B"
+        ],
+        "tempo": 113.003,
+        "energy": 0.564,
+        "valence": 0.137,
+        "danceability": 0.585
+      }
+    },
+    {
+      "id": "song:Drake|One Dance",
+      "name": "One Dance",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 84,
+      "meta": {
+        "type": "song",
+        "artist": "Drake",
+        "year": 2016,
+        "popularity": 84,
+        "genres": [
+          "hip hop",
+          "pop",
+          "R&B"
+        ],
+        "tempo": 103.967,
+        "energy": 0.625,
+        "valence": 0.37,
+        "danceability": 0.792
+      }
+    },
+    {
+      "id": "song:Ed Sheeran|Shape of You",
+      "name": "Shape of You",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 84,
+      "meta": {
+        "type": "song",
+        "artist": "Ed Sheeran",
+        "year": 2017,
+        "popularity": 84,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 95.977,
+        "energy": 0.652,
+        "valence": 0.931,
+        "danceability": 0.825
+      }
+    },
+    {
+      "id": "song:Sean Paul|No Lie",
+      "name": "No Lie",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 84,
+      "meta": {
+        "type": "song",
+        "artist": "Sean Paul",
+        "year": 2018,
+        "popularity": 84,
+        "genres": [
+          "hip hop",
+          "pop"
+        ],
+        "tempo": 102.04,
+        "energy": 0.882,
+        "valence": 0.463,
+        "danceability": 0.742
+      }
+    },
+    {
+      "id": "song:Billie Eilish|Bored",
+      "name": "Bored",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 84,
+      "meta": {
+        "type": "song",
+        "artist": "Billie Eilish",
+        "year": 2017,
+        "popularity": 84,
+        "genres": [
+          "pop",
+          "Dance/Electronic"
+        ],
+        "tempo": 119.959,
+        "energy": 0.318,
+        "valence": 0.112,
+        "danceability": 0.614
+      }
+    },
+    {
+      "id": "song:Juice WRLD|Lucid Dreams",
+      "name": "Lucid Dreams",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 84,
+      "meta": {
+        "type": "song",
+        "artist": "Juice WRLD",
+        "year": 2018,
+        "popularity": 84,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 83.903,
+        "energy": 0.566,
+        "valence": 0.218,
+        "danceability": 0.511
+      }
+    },
+    {
+      "id": "song:Gesaffelstein|Lost in the Fire (feat. The Weeknd)",
+      "name": "Lost in the Fire (feat. The Weeknd)",
+      "category": 2,
+      "symbolSize": 15.7,
+      "value": 84,
+      "meta": {
+        "type": "song",
+        "artist": "Gesaffelstein",
+        "year": 2019,
+        "popularity": 84,
+        "genres": [
+          "Dance/Electronic"
+        ],
+        "tempo": 100.966,
+        "energy": 0.671,
+        "valence": 0.166,
+        "danceability": 0.658
+      }
+    },
+    {
+      "id": "song:Bruno Mars|When I Was Your Man",
+      "name": "When I Was Your Man",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "Bruno Mars",
+        "year": 2012,
+        "popularity": 83,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 72.795,
+        "energy": 0.28,
+        "valence": 0.387,
+        "danceability": 0.612
+      }
+    },
+    {
+      "id": "song:Billie Eilish|bad guy",
+      "name": "bad guy",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "Billie Eilish",
+        "year": 2019,
+        "popularity": 83,
+        "genres": [
+          "pop",
+          "Dance/Electronic"
+        ],
+        "tempo": 135.128,
+        "energy": 0.425,
+        "valence": 0.562,
+        "danceability": 0.701
+      }
+    },
+    {
+      "id": "song:Linkin Park|In the End",
+      "name": "In the End",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "Linkin Park",
+        "year": 2000,
+        "popularity": 83,
+        "genres": [
+          "rock",
+          "metal"
+        ],
+        "tempo": 105.143,
+        "energy": 0.864,
+        "valence": 0.4,
+        "danceability": 0.556
+      }
+    },
+    {
+      "id": "song:Eminem|Stan",
+      "name": "Stan",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "Eminem",
+        "year": 2000,
+        "popularity": 83,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 80.063,
+        "energy": 0.768,
+        "valence": 0.507,
+        "danceability": 0.78
+      }
+    },
+    {
+      "id": "song:Daft Punk|Get Lucky (feat. Pharrell Williams & Nile Rodgers) - Radio Edit",
+      "name": "Get Lucky (feat. Pharrell Williams & Nile Rodgers) - Radio Edit",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "Daft Punk",
+        "year": 2013,
+        "popularity": 83,
+        "genres": [
+          "hip hop",
+          "Dance/Electronic"
+        ],
+        "tempo": 116.047,
+        "energy": 0.811,
+        "valence": 0.862,
+        "danceability": 0.794
+      }
+    },
+    {
+      "id": "song:One Direction|Night Changes",
+      "name": "Night Changes",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "One Direction",
+        "year": 2014,
+        "popularity": 83,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 120.001,
+        "energy": 0.52,
+        "valence": 0.37,
+        "danceability": 0.672
+      }
+    },
+    {
+      "id": "song:Twenty One Pilots|Stressed Out",
+      "name": "Stressed Out",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "Twenty One Pilots",
+        "year": 2015,
+        "popularity": 83,
+        "genres": [
+          "rock"
+        ],
+        "tempo": 169.977,
+        "energy": 0.637,
+        "valence": 0.648,
+        "danceability": 0.734
+      }
+    },
+    {
+      "id": "song:Tame Impala|The Less I Know The Better",
+      "name": "The Less I Know The Better",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "Tame Impala",
+        "year": 2015,
+        "popularity": 83,
+        "genres": [
+          "metal"
+        ],
+        "tempo": 116.879,
+        "energy": 0.74,
+        "valence": 0.785,
+        "danceability": 0.64
+      }
+    },
+    {
+      "id": "song:The Chainsmokers|Closer",
+      "name": "Closer",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "The Chainsmokers",
+        "year": 2016,
+        "popularity": 83,
+        "genres": [
+          "pop",
+          "Dance/Electronic"
+        ],
+        "tempo": 95.01,
+        "energy": 0.524,
+        "valence": 0.661,
+        "danceability": 0.748
+      }
+    },
+    {
+      "id": "song:The Chainsmokers|Something Just Like This",
+      "name": "Something Just Like This",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "The Chainsmokers",
+        "year": 2017,
+        "popularity": 83,
+        "genres": [
+          "pop",
+          "Dance/Electronic"
+        ],
+        "tempo": 103.019,
+        "energy": 0.635,
+        "valence": 0.446,
+        "danceability": 0.617
+      }
+    },
+    {
+      "id": "song:Travis Scott|goosebumps",
+      "name": "goosebumps",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "Travis Scott",
+        "year": 2016,
+        "popularity": 83,
+        "genres": [
+          "hip hop",
+          "Dance/Electronic"
+        ],
+        "tempo": 130.049,
+        "energy": 0.728,
+        "valence": 0.43,
+        "danceability": 0.841
+      }
+    },
+    {
+      "id": "song:XXXTENTACION|Jocelyn Flores",
+      "name": "Jocelyn Flores",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "XXXTENTACION",
+        "year": 2017,
+        "popularity": 83,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 134.021,
+        "energy": 0.391,
+        "valence": 0.437,
+        "danceability": 0.872
+      }
+    },
+    {
+      "id": "song:Post Malone|rockstar (feat. 21 Savage)",
+      "name": "rockstar (feat. 21 Savage)",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "Post Malone",
+        "year": 2018,
+        "popularity": 83,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 159.801,
+        "energy": 0.52,
+        "valence": 0.129,
+        "danceability": 0.585
+      }
+    },
+    {
+      "id": "song:Ariana Grande|7 rings",
+      "name": "7 rings",
+      "category": 2,
+      "symbolSize": 15.6,
+      "value": 83,
+      "meta": {
+        "type": "song",
+        "artist": "Ariana Grande",
+        "year": 2019,
+        "popularity": 83,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 140.048,
+        "energy": 0.317,
+        "valence": 0.327,
+        "danceability": 0.778
+      }
+    },
+    {
+      "id": "song:Nelly Furtado|Promiscuous",
+      "name": "Promiscuous",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Nelly Furtado",
+        "year": 2006,
+        "popularity": 82,
+        "genres": [
+          "hip hop",
+          "pop",
+          "latin"
+        ],
+        "tempo": 114.328,
+        "energy": 0.97,
+        "valence": 0.868,
+        "danceability": 0.808
+      }
+    },
+    {
+      "id": "song:Mark Ronson|Uptown Funk (feat. Bruno Mars)",
+      "name": "Uptown Funk (feat. Bruno Mars)",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Mark Ronson",
+        "year": 2015,
+        "popularity": 82,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 114.988,
+        "energy": 0.609,
+        "valence": 0.928,
+        "danceability": 0.856
+      }
+    },
+    {
+      "id": "song:Dr. Dre|The Next Episode",
+      "name": "The Next Episode",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Dr. Dre",
+        "year": 1999,
+        "popularity": 82,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 95.295,
+        "energy": 0.909,
+        "valence": 0.309,
+        "danceability": 0.922
+      }
+    },
+    {
+      "id": "song:Outkast|Ms. Jackson",
+      "name": "Ms. Jackson",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Outkast",
+        "year": 2000,
+        "popularity": 82,
+        "genres": [
+          "hip hop",
+          "pop"
+        ],
+        "tempo": 94.948,
+        "energy": 0.806,
+        "valence": 0.613,
+        "danceability": 0.843
+      }
+    },
+    {
+      "id": "song:Gorillaz|Feel Good Inc.",
+      "name": "Feel Good Inc.",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Gorillaz",
+        "year": 2005,
+        "popularity": 82,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 138.559,
+        "energy": 0.705,
+        "valence": 0.772,
+        "danceability": 0.818
+      }
+    },
+    {
+      "id": "song:Shakira|Hips Don't Lie (feat. Wyclef Jean)",
+      "name": "Hips Don't Lie (feat. Wyclef Jean)",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Shakira",
+        "year": 2005,
+        "popularity": 82,
+        "genres": [
+          "pop",
+          "latin"
+        ],
+        "tempo": 100.024,
+        "energy": 0.824,
+        "valence": 0.758,
+        "danceability": 0.778
+      }
+    },
+    {
+      "id": "song:Kanye West|Heartless",
+      "name": "Heartless",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Kanye West",
+        "year": 2008,
+        "popularity": 82,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 87.999,
+        "energy": 0.647,
+        "valence": 0.654,
+        "danceability": 0.79
+      }
+    },
+    {
+      "id": "song:JAY-Z|Empire State Of Mind",
+      "name": "Empire State Of Mind",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "JAY-Z",
+        "year": 2009,
+        "popularity": 82,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 173.585,
+        "energy": 0.956,
+        "valence": 0.811,
+        "danceability": 0.491
+      }
+    },
+    {
+      "id": "song:Coldplay|Paradise",
+      "name": "Paradise",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Coldplay",
+        "year": 2011,
+        "popularity": 82,
+        "genres": [
+          "rock",
+          "pop"
+        ],
+        "tempo": 139.631,
+        "energy": 0.585,
+        "valence": 0.212,
+        "danceability": 0.449
+      }
+    },
+    {
+      "id": "song:Foster The People|Pumped Up Kicks",
+      "name": "Pumped Up Kicks",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Foster The People",
+        "year": 2011,
+        "popularity": 82,
+        "genres": [
+          "rock",
+          "pop"
+        ],
+        "tempo": 127.975,
+        "energy": 0.71,
+        "valence": 0.965,
+        "danceability": 0.733
+      }
+    },
+    {
+      "id": "song:JAY-Z|Ni**as In Paris",
+      "name": "Ni**as In Paris",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "JAY-Z",
+        "year": 2011,
+        "popularity": 82,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 140.022,
+        "energy": 0.858,
+        "valence": 0.775,
+        "danceability": 0.789
+      }
+    },
+    {
+      "id": "song:Maroon 5|Payphone",
+      "name": "Payphone",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Maroon 5",
+        "year": 2012,
+        "popularity": 82,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 110.015,
+        "energy": 0.752,
+        "valence": 0.545,
+        "danceability": 0.743
+      }
+    },
+    {
+      "id": "song:One Direction|What Makes You Beautiful",
+      "name": "What Makes You Beautiful",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "One Direction",
+        "year": 2012,
+        "popularity": 82,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 124.99,
+        "energy": 0.787,
+        "valence": 0.888,
+        "danceability": 0.726
+      }
+    },
+    {
+      "id": "song:MKTO|Classic",
+      "name": "Classic",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "MKTO",
+        "year": 2012,
+        "popularity": 82,
+        "genres": [
+          "hip hop",
+          "pop"
+        ],
+        "tempo": 102.071,
+        "energy": 0.791,
+        "valence": 0.756,
+        "danceability": 0.72
+      }
+    },
+    {
+      "id": "song:Taylor Swift|Blank Space",
+      "name": "Blank Space",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Taylor Swift",
+        "year": 2014,
+        "popularity": 82,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 95.997,
+        "energy": 0.703,
+        "valence": 0.57,
+        "danceability": 0.76
+      }
+    },
+    {
+      "id": "song:Coldplay|Hymn for the Weekend",
+      "name": "Hymn for the Weekend",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Coldplay",
+        "year": 2015,
+        "popularity": 82,
+        "genres": [
+          "rock",
+          "pop"
+        ],
+        "tempo": 90.027,
+        "energy": 0.693,
+        "valence": 0.412,
+        "danceability": 0.491
+      }
+    },
+    {
+      "id": "song:Shawn Mendes|Treat You Better",
+      "name": "Treat You Better",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Shawn Mendes",
+        "year": 2017,
+        "popularity": 82,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 82.695,
+        "energy": 0.819,
+        "valence": 0.747,
+        "danceability": 0.444
+      }
+    },
+    {
+      "id": "song:French Montana|Unforgettable",
+      "name": "Unforgettable",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "French Montana",
+        "year": 2017,
+        "popularity": 82,
+        "genres": [
+          "hip hop",
+          "pop"
+        ],
+        "tempo": 97.985,
+        "energy": 0.769,
+        "valence": 0.733,
+        "danceability": 0.726
+      }
+    },
+    {
+      "id": "song:XXXTENTACION|Moonlight",
+      "name": "Moonlight",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "XXXTENTACION",
+        "year": 2018,
+        "popularity": 82,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 128.009,
+        "energy": 0.537,
+        "valence": 0.711,
+        "danceability": 0.921
+      }
+    },
+    {
+      "id": "song:XXXTENTACION|SAD!",
+      "name": "SAD!",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "XXXTENTACION",
+        "year": 2018,
+        "popularity": 82,
+        "genres": [
+          "hip hop"
+        ],
+        "tempo": 75.023,
+        "energy": 0.613,
+        "valence": 0.473,
+        "danceability": 0.74
+      }
+    },
+    {
+      "id": "song:girl in red|we fell in love in october",
+      "name": "we fell in love in october",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "girl in red",
+        "year": 2018,
+        "popularity": 82,
+        "genres": [
+          "pop",
+          "rock",
+          "Dance/Electronic"
+        ],
+        "tempo": 129.959,
+        "energy": 0.366,
+        "valence": 0.237,
+        "danceability": 0.566
+      }
+    },
+    {
+      "id": "song:Marshmello|Happier",
+      "name": "Happier",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Marshmello",
+        "year": 2018,
+        "popularity": 82,
+        "genres": [
+          "pop",
+          "Dance/Electronic"
+        ],
+        "tempo": 100.015,
+        "energy": 0.792,
+        "valence": 0.671,
+        "danceability": 0.687
+      }
+    },
+    {
+      "id": "song:Lady Gaga|Shallow",
+      "name": "Shallow",
+      "category": 2,
+      "symbolSize": 15.5,
+      "value": 82,
+      "meta": {
+        "type": "song",
+        "artist": "Lady Gaga",
+        "year": 2018,
+        "popularity": 82,
+        "genres": [
+          "pop"
+        ],
+        "tempo": 95.799,
+        "energy": 0.385,
+        "valence": 0.323,
+        "danceability": 0.572
+      }
+    }
+  ],
+  "links": [
+    {
+      "source": "artist:Rihanna",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Eminem",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Drake",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Calvin Harris",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Britney Spears",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:David Guetta",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Katy Perry",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Beyoncé",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Chris Brown",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Kanye West",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Taylor Swift",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Black Eyed Peas",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Bruno Mars",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Coldplay",
+      "target": "genre:rock",
+      "value": 1
+    },
+    {
+      "source": "artist:JAY-Z",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Justin Timberlake",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Lady Gaga",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Maroon 5",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Usher",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Nelly",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Flo Rida",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:P!nk",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Jason Derulo",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Ariana Grande",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Ed Sheeran",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Pitbull",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:50 Cent",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Avril Lavigne",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:One Direction",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Sean Paul",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Nickelback",
+      "target": "genre:rock",
+      "value": 1
+    },
+    {
+      "source": "artist:Linkin Park",
+      "target": "genre:rock",
+      "value": 1
+    },
+    {
+      "source": "artist:Destiny's Child",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Avicii",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Post Malone",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Ne-Yo",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:The Chainsmokers",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:OneRepublic",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Ludacris",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Enrique Iglesias",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:The Neighbourhood",
+      "target": "genre:rock",
+      "value": 1
+    },
+    {
+      "source": "artist:Tom Odell",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Billie Eilish",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:WILLOW",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:John Legend",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Lewis Capaldi",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Arctic Monkeys",
+      "target": "genre:rock",
+      "value": 1
+    },
+    {
+      "source": "artist:The Weeknd",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Juice WRLD",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Gesaffelstein",
+      "target": "genre:Dance/Electronic",
+      "value": 1
+    },
+    {
+      "source": "artist:Daft Punk",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Twenty One Pilots",
+      "target": "genre:rock",
+      "value": 1
+    },
+    {
+      "source": "artist:Tame Impala",
+      "target": "genre:metal",
+      "value": 1
+    },
+    {
+      "source": "artist:Travis Scott",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:XXXTENTACION",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Nelly Furtado",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Mark Ronson",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Dr. Dre",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Outkast",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Gorillaz",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Shakira",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Foster The People",
+      "target": "genre:rock",
+      "value": 1
+    },
+    {
+      "source": "artist:MKTO",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:Shawn Mendes",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:French Montana",
+      "target": "genre:hip hop",
+      "value": 1
+    },
+    {
+      "source": "artist:girl in red",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "artist:Marshmello",
+      "target": "genre:pop",
+      "value": 1
+    },
+    {
+      "source": "song:The Neighbourhood|Sweater Weather",
+      "target": "artist:The Neighbourhood",
+      "value": 1
+    },
+    {
+      "source": "song:Tom Odell|Another Love",
+      "target": "artist:Tom Odell",
+      "value": 1
+    },
+    {
+      "source": "song:Eminem|Without Me",
+      "target": "artist:Eminem",
+      "value": 1
+    },
+    {
+      "source": "song:Eminem|The Real Slim Shady",
+      "target": "artist:Eminem",
+      "value": 1
+    },
+    {
+      "source": "song:Billie Eilish|lovely (with Khalid)",
+      "target": "artist:Billie Eilish",
+      "value": 1
+    },
+    {
+      "source": "song:WILLOW|Wait a Minute!",
+      "target": "artist:WILLOW",
+      "value": 1
+    },
+    {
+      "source": "song:Ed Sheeran|Perfect",
+      "target": "artist:Ed Sheeran",
+      "value": 1
+    },
+    {
+      "source": "song:Eminem|'Till I Collapse",
+      "target": "artist:Eminem",
+      "value": 1
+    },
+    {
+      "source": "song:Bruno Mars|Locked out of Heaven",
+      "target": "artist:Bruno Mars",
+      "value": 1
+    },
+    {
+      "source": "song:The Neighbourhood|Daddy Issues",
+      "target": "artist:The Neighbourhood",
+      "value": 1
+    },
+    {
+      "source": "song:Avicii|The Nights",
+      "target": "artist:Avicii",
+      "value": 1
+    },
+    {
+      "source": "song:Post Malone|Circles",
+      "target": "artist:Post Malone",
+      "value": 1
+    },
+    {
+      "source": "song:John Legend|All of Me",
+      "target": "artist:John Legend",
+      "value": 1
+    },
+    {
+      "source": "song:Lewis Capaldi|Someone You Loved",
+      "target": "artist:Lewis Capaldi",
+      "value": 1
+    },
+    {
+      "source": "song:Arctic Monkeys|Why'd You Only Call Me When You're High?",
+      "target": "artist:Arctic Monkeys",
+      "value": 1
+    },
+    {
+      "source": "song:Arctic Monkeys|Do I Wanna Know?",
+      "target": "artist:Arctic Monkeys",
+      "value": 1
+    },
+    {
+      "source": "song:The Weeknd|The Hills",
+      "target": "artist:The Weeknd",
+      "value": 1
+    },
+    {
+      "source": "song:Drake|One Dance",
+      "target": "artist:Drake",
+      "value": 1
+    },
+    {
+      "source": "song:Ed Sheeran|Shape of You",
+      "target": "artist:Ed Sheeran",
+      "value": 1
+    },
+    {
+      "source": "song:Sean Paul|No Lie",
+      "target": "artist:Sean Paul",
+      "value": 1
+    },
+    {
+      "source": "song:Billie Eilish|Bored",
+      "target": "artist:Billie Eilish",
+      "value": 1
+    },
+    {
+      "source": "song:Juice WRLD|Lucid Dreams",
+      "target": "artist:Juice WRLD",
+      "value": 1
+    },
+    {
+      "source": "song:Gesaffelstein|Lost in the Fire (feat. The Weeknd)",
+      "target": "artist:Gesaffelstein",
+      "value": 1
+    },
+    {
+      "source": "song:Bruno Mars|When I Was Your Man",
+      "target": "artist:Bruno Mars",
+      "value": 1
+    },
+    {
+      "source": "song:Billie Eilish|bad guy",
+      "target": "artist:Billie Eilish",
+      "value": 1
+    },
+    {
+      "source": "song:Linkin Park|In the End",
+      "target": "artist:Linkin Park",
+      "value": 1
+    },
+    {
+      "source": "song:Eminem|Stan",
+      "target": "artist:Eminem",
+      "value": 1
+    },
+    {
+      "source": "song:Daft Punk|Get Lucky (feat. Pharrell Williams & Nile Rodgers) - Radio Edit",
+      "target": "artist:Daft Punk",
+      "value": 1
+    },
+    {
+      "source": "song:One Direction|Night Changes",
+      "target": "artist:One Direction",
+      "value": 1
+    },
+    {
+      "source": "song:Twenty One Pilots|Stressed Out",
+      "target": "artist:Twenty One Pilots",
+      "value": 1
+    },
+    {
+      "source": "song:Tame Impala|The Less I Know The Better",
+      "target": "artist:Tame Impala",
+      "value": 1
+    },
+    {
+      "source": "song:The Chainsmokers|Closer",
+      "target": "artist:The Chainsmokers",
+      "value": 1
+    },
+    {
+      "source": "song:The Chainsmokers|Something Just Like This",
+      "target": "artist:The Chainsmokers",
+      "value": 1
+    },
+    {
+      "source": "song:Travis Scott|goosebumps",
+      "target": "artist:Travis Scott",
+      "value": 1
+    },
+    {
+      "source": "song:XXXTENTACION|Jocelyn Flores",
+      "target": "artist:XXXTENTACION",
+      "value": 1
+    },
+    {
+      "source": "song:Post Malone|rockstar (feat. 21 Savage)",
+      "target": "artist:Post Malone",
+      "value": 1
+    },
+    {
+      "source": "song:Ariana Grande|7 rings",
+      "target": "artist:Ariana Grande",
+      "value": 1
+    },
+    {
+      "source": "song:Nelly Furtado|Promiscuous",
+      "target": "artist:Nelly Furtado",
+      "value": 1
+    },
+    {
+      "source": "song:Mark Ronson|Uptown Funk (feat. Bruno Mars)",
+      "target": "artist:Mark Ronson",
+      "value": 1
+    },
+    {
+      "source": "song:Dr. Dre|The Next Episode",
+      "target": "artist:Dr. Dre",
+      "value": 1
+    },
+    {
+      "source": "song:Outkast|Ms. Jackson",
+      "target": "artist:Outkast",
+      "value": 1
+    },
+    {
+      "source": "song:Gorillaz|Feel Good Inc.",
+      "target": "artist:Gorillaz",
+      "value": 1
+    },
+    {
+      "source": "song:Shakira|Hips Don't Lie (feat. Wyclef Jean)",
+      "target": "artist:Shakira",
+      "value": 1
+    },
+    {
+      "source": "song:Kanye West|Heartless",
+      "target": "artist:Kanye West",
+      "value": 1
+    },
+    {
+      "source": "song:JAY-Z|Empire State Of Mind",
+      "target": "artist:JAY-Z",
+      "value": 1
+    },
+    {
+      "source": "song:Coldplay|Paradise",
+      "target": "artist:Coldplay",
+      "value": 1
+    },
+    {
+      "source": "song:Foster The People|Pumped Up Kicks",
+      "target": "artist:Foster The People",
+      "value": 1
+    },
+    {
+      "source": "song:JAY-Z|Ni**as In Paris",
+      "target": "artist:JAY-Z",
+      "value": 1
+    },
+    {
+      "source": "song:Maroon 5|Payphone",
+      "target": "artist:Maroon 5",
+      "value": 1
+    },
+    {
+      "source": "song:One Direction|What Makes You Beautiful",
+      "target": "artist:One Direction",
+      "value": 1
+    },
+    {
+      "source": "song:MKTO|Classic",
+      "target": "artist:MKTO",
+      "value": 1
+    },
+    {
+      "source": "song:Taylor Swift|Blank Space",
+      "target": "artist:Taylor Swift",
+      "value": 1
+    },
+    {
+      "source": "song:Coldplay|Hymn for the Weekend",
+      "target": "artist:Coldplay",
+      "value": 1
+    },
+    {
+      "source": "song:Shawn Mendes|Treat You Better",
+      "target": "artist:Shawn Mendes",
+      "value": 1
+    },
+    {
+      "source": "song:French Montana|Unforgettable",
+      "target": "artist:French Montana",
+      "value": 1
+    },
+    {
+      "source": "song:XXXTENTACION|Moonlight",
+      "target": "artist:XXXTENTACION",
+      "value": 1
+    },
+    {
+      "source": "song:XXXTENTACION|SAD!",
+      "target": "artist:XXXTENTACION",
+      "value": 1
+    },
+    {
+      "source": "song:girl in red|we fell in love in october",
+      "target": "artist:girl in red",
+      "value": 1
+    },
+    {
+      "source": "song:Marshmello|Happier",
+      "target": "artist:Marshmello",
+      "value": 1
+    },
+    {
+      "source": "song:Lady Gaga|Shallow",
+      "target": "artist:Lady Gaga",
+      "value": 1
+    },
+    {
+      "source": "song:The Neighbourhood|Sweater Weather",
+      "target": "song:Linkin Park|In the End",
+      "value": 0.885
+    },
+    {
+      "source": "song:The Neighbourhood|Sweater Weather",
+      "target": "song:Sean Paul|No Lie",
+      "value": 0.835
+    },
+    {
+      "source": "song:Tom Odell|Another Love",
+      "target": "song:Billie Eilish|Bored",
+      "value": 0.745
+    },
+    {
+      "source": "song:Tom Odell|Another Love",
+      "target": "song:Billie Eilish|lovely (with Khalid)",
+      "value": 0.738
+    },
+    {
+      "source": "song:Eminem|Without Me",
+      "target": "song:Eminem|The Real Slim Shady",
+      "value": 0.896
+    },
+    {
+      "source": "song:Eminem|Without Me",
+      "target": "song:WILLOW|Wait a Minute!",
+      "value": 0.86
+    },
+    {
+      "source": "song:Eminem|The Real Slim Shady",
+      "target": "song:Eminem|Without Me",
+      "value": 0.896
+    },
+    {
+      "source": "song:Eminem|The Real Slim Shady",
+      "target": "song:Mark Ronson|Uptown Funk (feat. Bruno Mars)",
+      "value": 0.829
+    },
+    {
+      "source": "song:Billie Eilish|lovely (with Khalid)",
+      "target": "song:John Legend|All of Me",
+      "value": 0.815
+    },
+    {
+      "source": "song:Billie Eilish|lovely (with Khalid)",
+      "target": "song:Billie Eilish|Bored",
+      "value": 0.789
+    },
+    {
+      "source": "song:WILLOW|Wait a Minute!",
+      "target": "song:Kanye West|Heartless",
+      "value": 0.914
+    },
+    {
+      "source": "song:WILLOW|Wait a Minute!",
+      "target": "song:French Montana|Unforgettable",
+      "value": 0.911
+    },
+    {
+      "source": "song:Ed Sheeran|Perfect",
+      "target": "song:The Weeknd|The Hills",
+      "value": 0.849
+    },
+    {
+      "source": "song:Ed Sheeran|Perfect",
+      "target": "song:girl in red|we fell in love in october",
+      "value": 0.824
+    },
+    {
+      "source": "song:Eminem|'Till I Collapse",
+      "target": "song:Post Malone|rockstar (feat. 21 Savage)",
+      "value": 0.746
+    },
+    {
+      "source": "song:Eminem|'Till I Collapse",
+      "target": "song:Coldplay|Paradise",
+      "value": 0.746
+    },
+    {
+      "source": "song:Bruno Mars|Locked out of Heaven",
+      "target": "song:One Direction|What Makes You Beautiful",
+      "value": 0.879
+    },
+    {
+      "source": "song:Bruno Mars|Locked out of Heaven",
+      "target": "song:Gorillaz|Feel Good Inc.",
+      "value": 0.876
+    },
+    {
+      "source": "song:The Neighbourhood|Daddy Issues",
+      "target": "song:Arctic Monkeys|Do I Wanna Know?",
+      "value": 0.875
+    },
+    {
+      "source": "song:The Neighbourhood|Daddy Issues",
+      "target": "song:The Chainsmokers|Something Just Like This",
+      "value": 0.844
+    },
+    {
+      "source": "song:Avicii|The Nights",
+      "target": "song:Tame Impala|The Less I Know The Better",
+      "value": 0.832
+    },
+    {
+      "source": "song:Avicii|The Nights",
+      "target": "song:MKTO|Classic",
+      "value": 0.798
+    },
+    {
+      "source": "song:Post Malone|Circles",
+      "target": "song:Marshmello|Happier",
+      "value": 0.864
+    },
+    {
+      "source": "song:Post Malone|Circles",
+      "target": "song:Taylor Swift|Blank Space",
+      "value": 0.852
+    },
+    {
+      "source": "song:John Legend|All of Me",
+      "target": "song:Billie Eilish|lovely (with Khalid)",
+      "value": 0.815
+    },
+    {
+      "source": "song:John Legend|All of Me",
+      "target": "song:Lewis Capaldi|Someone You Loved",
+      "value": 0.789
+    },
+    {
+      "source": "song:Lewis Capaldi|Someone You Loved",
+      "target": "song:One Direction|Night Changes",
+      "value": 0.8
+    },
+    {
+      "source": "song:Lewis Capaldi|Someone You Loved",
+      "target": "song:John Legend|All of Me",
+      "value": 0.789
+    },
+    {
+      "source": "song:Arctic Monkeys|Why'd You Only Call Me When You're High?",
+      "target": "song:French Montana|Unforgettable",
+      "value": 0.861
+    },
+    {
+      "source": "song:Arctic Monkeys|Why'd You Only Call Me When You're High?",
+      "target": "song:WILLOW|Wait a Minute!",
+      "value": 0.854
+    },
+    {
+      "source": "song:Arctic Monkeys|Do I Wanna Know?",
+      "target": "song:The Neighbourhood|Daddy Issues",
+      "value": 0.875
+    },
+    {
+      "source": "song:Arctic Monkeys|Do I Wanna Know?",
+      "target": "song:Coldplay|Hymn for the Weekend",
+      "value": 0.851
+    },
+    {
+      "source": "song:The Weeknd|The Hills",
+      "target": "song:Gesaffelstein|Lost in the Fire (feat. The Weeknd)",
+      "value": 0.871
+    },
+    {
+      "source": "song:The Weeknd|The Hills",
+      "target": "song:Ed Sheeran|Perfect",
+      "value": 0.849
+    },
+    {
+      "source": "song:Drake|One Dance",
+      "target": "song:The Chainsmokers|Something Just Like This",
+      "value": 0.836
+    },
+    {
+      "source": "song:Drake|One Dance",
+      "target": "song:Travis Scott|goosebumps",
+      "value": 0.834
+    },
+    {
+      "source": "song:Ed Sheeran|Shape of You",
+      "target": "song:XXXTENTACION|Moonlight",
+      "value": 0.762
+    },
+    {
+      "source": "song:Ed Sheeran|Shape of You",
+      "target": "song:The Chainsmokers|Closer",
+      "value": 0.74
+    },
+    {
+      "source": "song:Sean Paul|No Lie",
+      "target": "song:Maroon 5|Payphone",
+      "value": 0.861
+    },
+    {
+      "source": "song:Sean Paul|No Lie",
+      "target": "song:Eminem|Stan",
+      "value": 0.855
+    },
+    {
+      "source": "song:Billie Eilish|Bored",
+      "target": "song:Billie Eilish|lovely (with Khalid)",
+      "value": 0.789
+    },
+    {
+      "source": "song:Billie Eilish|Bored",
+      "target": "song:John Legend|All of Me",
+      "value": 0.771
+    },
+    {
+      "source": "song:Juice WRLD|Lucid Dreams",
+      "target": "song:Lady Gaga|Shallow",
+      "value": 0.815
+    },
+    {
+      "source": "song:Juice WRLD|Lucid Dreams",
+      "target": "song:Ed Sheeran|Perfect",
+      "value": 0.801
+    },
+    {
+      "source": "song:Gesaffelstein|Lost in the Fire (feat. The Weeknd)",
+      "target": "song:The Weeknd|The Hills",
+      "value": 0.871
+    },
+    {
+      "source": "song:Gesaffelstein|Lost in the Fire (feat. The Weeknd)",
+      "target": "song:Ed Sheeran|Perfect",
+      "value": 0.805
+    },
+    {
+      "source": "song:Bruno Mars|When I Was Your Man",
+      "target": "song:John Legend|All of Me",
+      "value": 0.764
+    },
+    {
+      "source": "song:Bruno Mars|When I Was Your Man",
+      "target": "song:Lewis Capaldi|Someone You Loved",
+      "value": 0.761
+    },
+    {
+      "source": "song:Billie Eilish|bad guy",
+      "target": "song:XXXTENTACION|Jocelyn Flores",
+      "value": 0.796
+    },
+    {
+      "source": "song:Billie Eilish|bad guy",
+      "target": "song:The Chainsmokers|Closer",
+      "value": 0.791
+    },
+    {
+      "source": "song:Linkin Park|In the End",
+      "target": "song:The Neighbourhood|Sweater Weather",
+      "value": 0.885
+    },
+    {
+      "source": "song:Linkin Park|In the End",
+      "target": "song:Sean Paul|No Lie",
+      "value": 0.832
+    },
+    {
+      "source": "song:Eminem|Stan",
+      "target": "song:Taylor Swift|Blank Space",
+      "value": 0.878
+    },
+    {
+      "source": "song:Eminem|Stan",
+      "target": "song:Maroon 5|Payphone",
+      "value": 0.862
+    },
+    {
+      "source": "song:Daft Punk|Get Lucky (feat. Pharrell Williams & Nile Rodgers) - Radio Edit",
+      "target": "song:One Direction|What Makes You Beautiful",
+      "value": 0.913
+    },
+    {
+      "source": "song:Daft Punk|Get Lucky (feat. Pharrell Williams & Nile Rodgers) - Radio Edit",
+      "target": "song:MKTO|Classic",
+      "value": 0.871
+    },
+    {
+      "source": "song:One Direction|Night Changes",
+      "target": "song:Lewis Capaldi|Someone You Loved",
+      "value": 0.8
+    },
+    {
+      "source": "song:One Direction|Night Changes",
+      "target": "song:Billie Eilish|Bored",
+      "value": 0.749
+    },
+    {
+      "source": "song:Twenty One Pilots|Stressed Out",
+      "target": "song:Gorillaz|Feel Good Inc.",
+      "value": 0.813
+    },
+    {
+      "source": "song:Twenty One Pilots|Stressed Out",
+      "target": "song:Bruno Mars|Locked out of Heaven",
+      "value": 0.792
+    },
+    {
+      "source": "song:Tame Impala|The Less I Know The Better",
+      "target": "song:MKTO|Classic",
+      "value": 0.888
+    },
+    {
+      "source": "song:Tame Impala|The Less I Know The Better",
+      "target": "song:French Montana|Unforgettable",
+      "value": 0.876
+    },
+    {
+      "source": "song:The Chainsmokers|Closer",
+      "target": "song:Billie Eilish|bad guy",
+      "value": 0.791
+    },
+    {
+      "source": "song:The Chainsmokers|Closer",
+      "target": "song:XXXTENTACION|SAD!",
+      "value": 0.782
+    },
+    {
+      "source": "song:The Chainsmokers|Something Just Like This",
+      "target": "song:The Neighbourhood|Daddy Issues",
+      "value": 0.844
+    },
+    {
+      "source": "song:The Chainsmokers|Something Just Like This",
+      "target": "song:Drake|One Dance",
+      "value": 0.836
+    },
+    {
+      "source": "song:Travis Scott|goosebumps",
+      "target": "song:Maroon 5|Payphone",
+      "value": 0.837
+    },
+    {
+      "source": "song:Travis Scott|goosebumps",
+      "target": "song:Drake|One Dance",
+      "value": 0.834
+    },
+    {
+      "source": "song:XXXTENTACION|Jocelyn Flores",
+      "target": "song:Ariana Grande|7 rings",
+      "value": 0.829
+    },
+    {
+      "source": "song:XXXTENTACION|Jocelyn Flores",
+      "target": "song:Billie Eilish|bad guy",
+      "value": 0.796
+    },
+    {
+      "source": "song:Post Malone|rockstar (feat. 21 Savage)",
+      "target": "song:Coldplay|Paradise",
+      "value": 0.825
+    },
+    {
+      "source": "song:Post Malone|rockstar (feat. 21 Savage)",
+      "target": "song:girl in red|we fell in love in october",
+      "value": 0.806
+    },
+    {
+      "source": "song:Ariana Grande|7 rings",
+      "target": "song:XXXTENTACION|Jocelyn Flores",
+      "value": 0.829
+    },
+    {
+      "source": "song:Ariana Grande|7 rings",
+      "target": "song:One Direction|Night Changes",
+      "value": 0.731
+    },
+    {
+      "source": "song:Nelly Furtado|Promiscuous",
+      "target": "song:Daft Punk|Get Lucky (feat. Pharrell Williams & Nile Rodgers) - Radio Edit",
+      "value": 0.862
+    },
+    {
+      "source": "song:Nelly Furtado|Promiscuous",
+      "target": "song:JAY-Z|Ni**as In Paris",
+      "value": 0.828
+    },
+    {
+      "source": "song:Mark Ronson|Uptown Funk (feat. Bruno Mars)",
+      "target": "song:Eminem|The Real Slim Shady",
+      "value": 0.829
+    },
+    {
+      "source": "song:Mark Ronson|Uptown Funk (feat. Bruno Mars)",
+      "target": "song:Gorillaz|Feel Good Inc.",
+      "value": 0.819
+    },
+    {
+      "source": "song:Dr. Dre|The Next Episode",
+      "target": "song:Sean Paul|No Lie",
+      "value": 0.805
+    },
+    {
+      "source": "song:Dr. Dre|The Next Episode",
+      "target": "song:Eminem|Stan",
+      "value": 0.774
+    },
+    {
+      "source": "song:Outkast|Ms. Jackson",
+      "target": "song:Taylor Swift|Blank Space",
+      "value": 0.873
+    },
+    {
+      "source": "song:Outkast|Ms. Jackson",
+      "target": "song:Marshmello|Happier",
+      "value": 0.851
+    },
+    {
+      "source": "song:Gorillaz|Feel Good Inc.",
+      "target": "song:Bruno Mars|Locked out of Heaven",
+      "value": 0.876
+    },
+    {
+      "source": "song:Gorillaz|Feel Good Inc.",
+      "target": "song:One Direction|What Makes You Beautiful",
+      "value": 0.846
+    },
+    {
+      "source": "song:Shakira|Hips Don't Lie (feat. Wyclef Jean)",
+      "target": "song:Marshmello|Happier",
+      "value": 0.862
+    },
+    {
+      "source": "song:Shakira|Hips Don't Lie (feat. Wyclef Jean)",
+      "target": "song:Outkast|Ms. Jackson",
+      "value": 0.823
+    },
+    {
+      "source": "song:Kanye West|Heartless",
+      "target": "song:WILLOW|Wait a Minute!",
+      "value": 0.914
+    },
+    {
+      "source": "song:Kanye West|Heartless",
+      "target": "song:Taylor Swift|Blank Space",
+      "value": 0.89
+    },
+    {
+      "source": "song:JAY-Z|Empire State Of Mind",
+      "target": "song:Avicii|The Nights",
+      "value": 0.762
+    },
+    {
+      "source": "song:JAY-Z|Empire State Of Mind",
+      "target": "song:JAY-Z|Ni**as In Paris",
+      "value": 0.73
+    },
+    {
+      "source": "song:Coldplay|Paradise",
+      "target": "song:The Weeknd|The Hills",
+      "value": 0.829
+    },
+    {
+      "source": "song:Coldplay|Paradise",
+      "target": "song:Post Malone|rockstar (feat. 21 Savage)",
+      "value": 0.825
+    },
+    {
+      "source": "song:Foster The People|Pumped Up Kicks",
+      "target": "song:Bruno Mars|Locked out of Heaven",
+      "value": 0.862
+    },
+    {
+      "source": "song:Foster The People|Pumped Up Kicks",
+      "target": "song:One Direction|What Makes You Beautiful",
+      "value": 0.851
+    },
+    {
+      "source": "song:JAY-Z|Ni**as In Paris",
+      "target": "song:Daft Punk|Get Lucky (feat. Pharrell Williams & Nile Rodgers) - Radio Edit",
+      "value": 0.85
+    },
+    {
+      "source": "song:JAY-Z|Ni**as In Paris",
+      "target": "song:Gorillaz|Feel Good Inc.",
+      "value": 0.836
+    },
+    {
+      "source": "song:Maroon 5|Payphone",
+      "target": "song:Taylor Swift|Blank Space",
+      "value": 0.89
+    },
+    {
+      "source": "song:Maroon 5|Payphone",
+      "target": "song:WILLOW|Wait a Minute!",
+      "value": 0.873
+    },
+    {
+      "source": "song:One Direction|What Makes You Beautiful",
+      "target": "song:Daft Punk|Get Lucky (feat. Pharrell Williams & Nile Rodgers) - Radio Edit",
+      "value": 0.913
+    },
+    {
+      "source": "song:One Direction|What Makes You Beautiful",
+      "target": "song:Bruno Mars|Locked out of Heaven",
+      "value": 0.879
+    },
+    {
+      "source": "song:MKTO|Classic",
+      "target": "song:French Montana|Unforgettable",
+      "value": 0.962
+    },
+    {
+      "source": "song:MKTO|Classic",
+      "target": "song:Tame Impala|The Less I Know The Better",
+      "value": 0.888
+    },
+    {
+      "source": "song:Taylor Swift|Blank Space",
+      "target": "song:Maroon 5|Payphone",
+      "value": 0.89
+    },
+    {
+      "source": "song:Taylor Swift|Blank Space",
+      "target": "song:Kanye West|Heartless",
+      "value": 0.89
+    },
+    {
+      "source": "song:Coldplay|Hymn for the Weekend",
+      "target": "song:Arctic Monkeys|Do I Wanna Know?",
+      "value": 0.851
+    },
+    {
+      "source": "song:Coldplay|Hymn for the Weekend",
+      "target": "song:The Chainsmokers|Something Just Like This",
+      "value": 0.816
+    },
+    {
+      "source": "song:Shawn Mendes|Treat You Better",
+      "target": "song:Avicii|The Nights",
+      "value": 0.79
+    },
+    {
+      "source": "song:Shawn Mendes|Treat You Better",
+      "target": "song:Marshmello|Happier",
+      "value": 0.779
+    },
+    {
+      "source": "song:French Montana|Unforgettable",
+      "target": "song:MKTO|Classic",
+      "value": 0.962
+    },
+    {
+      "source": "song:French Montana|Unforgettable",
+      "target": "song:WILLOW|Wait a Minute!",
+      "value": 0.911
+    },
+    {
+      "source": "song:XXXTENTACION|Moonlight",
+      "target": "song:The Chainsmokers|Closer",
+      "value": 0.78
+    },
+    {
+      "source": "song:XXXTENTACION|Moonlight",
+      "target": "song:Ed Sheeran|Shape of You",
+      "value": 0.762
+    },
+    {
+      "source": "song:XXXTENTACION|SAD!",
+      "target": "song:Taylor Swift|Blank Space",
+      "value": 0.813
+    },
+    {
+      "source": "song:XXXTENTACION|SAD!",
+      "target": "song:Arctic Monkeys|Do I Wanna Know?",
+      "value": 0.809
+    },
+    {
+      "source": "song:girl in red|we fell in love in october",
+      "target": "song:Ed Sheeran|Perfect",
+      "value": 0.824
+    },
+    {
+      "source": "song:girl in red|we fell in love in october",
+      "target": "song:Post Malone|rockstar (feat. 21 Savage)",
+      "value": 0.806
+    },
+    {
+      "source": "song:Marshmello|Happier",
+      "target": "song:Post Malone|Circles",
+      "value": 0.864
+    },
+    {
+      "source": "song:Marshmello|Happier",
+      "target": "song:Shakira|Hips Don't Lie (feat. Wyclef Jean)",
+      "value": 0.862
+    },
+    {
+      "source": "song:Lady Gaga|Shallow",
+      "target": "song:Juice WRLD|Lucid Dreams",
+      "value": 0.815
+    },
+    {
+      "source": "song:Lady Gaga|Shallow",
+      "target": "song:Arctic Monkeys|Do I Wanna Know?",
+      "value": 0.796
+    }
+  ]
+}
