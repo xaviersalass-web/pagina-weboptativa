@@ -715,7 +715,7 @@ h1 em {
   color: rgba(255,255,255,0.85);
 }
 
-.tarjeta::after {
+.tarjeta[data-insight]::after {
   content: "ⓘ Pasa el cursor para el dato";
   position: absolute;
   top: 1rem;
@@ -728,12 +728,12 @@ h1 em {
   pointer-events: none;
   z-index: 3;
 }
-.tarjeta:hover::after,
-.tarjeta:focus-within::after,
-.tarjeta.abierto::after { opacity: 0; }
+.tarjeta[data-insight]:hover::after,
+.tarjeta[data-insight]:focus-within::after,
+.tarjeta[data-insight].abierto::after { opacity: 0; }
 
 @media (hover: none) {
-  .tarjeta::after { content: "Toca para ver el dato"; }
+  .tarjeta[data-insight]::after { content: "Toca para ver el dato"; }
 }
 
 /* =========================================================

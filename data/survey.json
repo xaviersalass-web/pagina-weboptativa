@@ -1,0 +1,134 @@
+{
+  "n": 30,
+  "fecha": "mayo 2026",
+  "edad": [
+    [
+      "18–24",
+      17
+    ],
+    [
+      "25–34",
+      6
+    ],
+    [
+      "35–44",
+      4
+    ],
+    [
+      "45–54",
+      2
+    ],
+    [
+      "55+",
+      1
+    ]
+  ],
+  "genero": [
+    [
+      "Femenino",
+      22
+    ],
+    [
+      "Masculino",
+      8
+    ]
+  ],
+  "ocupacion": [
+    [
+      "Estudiante",
+      12
+    ],
+    [
+      "Empleado",
+      8
+    ],
+    [
+      "Freelance",
+      6
+    ],
+    [
+      "Hogar",
+      2
+    ],
+    [
+      "Emprendedor/a",
+      2
+    ]
+  ],
+  "generos": [
+    [
+      "Pop",
+      23
+    ],
+    [
+      "Reggaetón",
+      18
+    ],
+    [
+      "Regional",
+      17
+    ],
+    [
+      "Electrónica",
+      7
+    ],
+    [
+      "Rock",
+      5
+    ],
+    [
+      "Rap",
+      3
+    ]
+  ],
+  "top_canciones": [
+    {
+      "cancion": "Apocalypse",
+      "artista": "Cigarettes After Sex",
+      "avg": 3.78,
+      "conocen": 9
+    },
+    {
+      "cancion": "Summer",
+      "artista": "Calvin Harris",
+      "avg": 3.71,
+      "conocen": 21
+    },
+    {
+      "cancion": "Viva La Vida",
+      "artista": "Coldplay",
+      "avg": 3.64,
+      "conocen": 25
+    },
+    {
+      "cancion": "Don’t You Worry Child",
+      "artista": "Swedish House Mafia",
+      "avg": 3.6,
+      "conocen": 15
+    },
+    {
+      "cancion": "Wake Me Up",
+      "artista": "Avicii",
+      "avg": 3.57,
+      "conocen": 21
+    },
+    {
+      "cancion": "Primera Cita",
+      "artista": "Carin León",
+      "avg": 3.42,
+      "conocen": 26
+    },
+    {
+      "cancion": "Titanium",
+      "artista": "David Guetta & Sia",
+      "avg": 3.39,
+      "conocen": 23
+    },
+    {
+      "cancion": "Bohemian Rhapsody",
+      "artista": "Queen",
+      "avg": 3.32,
+      "conocen": 19
+    }
+  ]
+}

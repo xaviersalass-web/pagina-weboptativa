@@ -43,12 +43,13 @@ const estado = {
 // Carga de datos
 // =========================================================
 async function cargarDatos() {
-  const [manifest, a, b, insights, network] = await Promise.all([
+  const [manifest, a, b, insights, network, survey] = await Promise.all([
     fetch("data/manifest.json").then((r) => r.json()),
     fetch("data/songs_a.json").then((r) => r.json()),
     fetch("data/songs_b.json").then((r) => r.json()),
     fetch("data/insights.json").then((r) => r.json()),
     fetch("data/network.json").then((r) => r.json()),
+    fetch("data/survey.json").then((r) => r.json()),
   ]);
   estado.manifest = manifest;
   estado.songs.set_a = a;
@@ -56,6 +57,7 @@ async function cargarDatos() {
   estado.activos = a;
   estado.insights = insights;
   estado.network = network;
+  estado.survey = survey;
   pintarStats();
 }
 
@@ -415,33 +417,29 @@ function renderDashboard() {
 }
 
 // =========================================================
-// Encuesta (mock — sustituible)
+// Encuesta (datos REALES desde data/survey.json — n = 30)
 // =========================================================
-const ENCUESTA = {
-  p1: [["La letra", 38], ["La melodía", 46], ["El ritmo", 32], ["Los recuerdos", 26]],
-  p2: [["Energético", 41], ["Relajado", 34], ["Nostálgico", 28], ["Romántico", 22], ["Triste", 17]],
-  p3: [["2000–2004", 18], ["2005–2009", 26], ["2010–2014", 44], ["2015–2020", 54]],
-  p4: {
-    indicadores: ["Letra", "Melodía", "Ritmo", "Energía", "Voz", "Producción"],
-    valores: [4.1, 4.6, 4.4, 4.2, 4.0, 3.8],
-  },
-};
-
 function renderEncuesta() {
+  const s = estado.survey;
+  if (!s) return;
+
+  // Edad — barras verticales (en orden etario)
   estado.graficos.p1 = estado.graficos.p1 || echarts.init(document.getElementById("chart-poll-1"));
   estado.graficos.p1.setOption({
-    grid: { left: 110, right: 30, top: 20, bottom: 20 },
+    grid: { left: 35, right: 20, top: 24, bottom: 28 },
     tooltip: { ...TOOLTIP, trigger: "axis", axisPointer: { type: "shadow" } },
-    xAxis: { type: "value", ...EJE_BASE },
-    yAxis: { type: "category", data: ENCUESTA.p1.map((d) => d[0]), ...EJE_BASE },
+    xAxis: { type: "category", data: s.edad.map((d) => d[0]), ...EJE_BASE },
+    yAxis: { type: "value", minInterval: 1, ...EJE_BASE },
     series: [{
       type: "bar",
-      data: ENCUESTA.p1.map((d, i) => ({ value: d[1], itemStyle: { color: PALETA[i % PALETA.length], borderRadius: [0, 6, 6, 0] } })),
-      barCategoryGap: "30%",
-      label: { show: true, position: "right", color: "#9aa39c" },
+      data: s.edad.map((d) => d[1]),
+      itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#1ed760" }, { offset: 1, color: "#0c8a3e" }] }, borderRadius: [8, 8, 0, 0] },
+      label: { show: true, position: "top", color: "#9aa39c" },
+      barCategoryGap: "32%",
     }],
   });
 
+  // Género — dona
   estado.graficos.p2 = estado.graficos.p2 || echarts.init(document.getElementById("chart-poll-2"));
   estado.graficos.p2.setOption({
     tooltip: { ...TOOLTIP, trigger: "item", formatter: "{b}: {c} ({d}%)" },
@@ -452,42 +450,63 @@ function renderEncuesta() {
       center: ["50%", "45%"],
       itemStyle: { borderColor: "#0d1311", borderWidth: 2 },
       label: { color: "#f1f3ef", fontSize: 11 },
-      data: ENCUESTA.p2.map(([n, v], i) => ({ name: n, value: v, itemStyle: { color: PALETA[i % PALETA.length] } })),
+      data: s.genero.map(([n, v], i) => ({ name: n, value: v, itemStyle: { color: PALETA[i % PALETA.length] } })),
     }],
   });
 
+  // Ocupación — barras horizontales
+  const ocu = [...s.ocupacion].reverse();
   estado.graficos.p3 = estado.graficos.p3 || echarts.init(document.getElementById("chart-poll-3"));
   estado.graficos.p3.setOption({
-    grid: { left: 40, right: 20, top: 30, bottom: 30 },
-    tooltip: { ...TOOLTIP, trigger: "axis" },
-    xAxis: { type: "category", data: ENCUESTA.p3.map((d) => d[0]), ...EJE_BASE },
-    yAxis: { type: "value", ...EJE_BASE },
+    grid: { left: 120, right: 36, top: 12, bottom: 12 },
+    tooltip: { ...TOOLTIP, trigger: "axis", axisPointer: { type: "shadow" } },
+    xAxis: { type: "value", minInterval: 1, ...EJE_BASE },
+    yAxis: { type: "category", data: ocu.map((d) => d[0]), ...EJE_BASE },
     series: [{
       type: "bar",
-      data: ENCUESTA.p3.map((d) => d[1]),
-      itemStyle: {
-        color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "#1ed760" }, { offset: 1, color: "#0c8a3e" }] },
-        borderRadius: [8, 8, 0, 0],
-      },
+      data: ocu.map((d, i) => ({ value: d[1], itemStyle: { color: PALETA[i % PALETA.length], borderRadius: [0, 6, 6, 0] } })),
+      label: { show: true, position: "right", color: "#9aa39c" },
+      barCategoryGap: "38%",
     }],
   });
 
+  // Géneros preferidos — barras horizontales (podían elegir varios)
+  const gen = [...s.generos].reverse();
   estado.graficos.p4 = estado.graficos.p4 || echarts.init(document.getElementById("chart-poll-4"));
   estado.graficos.p4.setOption({
-    tooltip: TOOLTIP,
-    radar: {
-      indicator: ENCUESTA.p4.indicadores.map((n) => ({ name: n, max: 5 })),
-      axisName: { color: "#9aa39c", fontSize: 12 },
-      splitArea: { areaStyle: { color: ["rgba(255,255,255,0.02)", "rgba(255,255,255,0.04)"] } },
-      splitLine: { lineStyle: { color: "rgba(255,255,255,0.1)" } },
-      axisLine: { lineStyle: { color: "rgba(255,255,255,0.15)" } },
-    },
+    grid: { left: 90, right: 36, top: 12, bottom: 12 },
+    tooltip: { ...TOOLTIP, trigger: "axis", axisPointer: { type: "shadow" } },
+    xAxis: { type: "value", minInterval: 1, ...EJE_BASE },
+    yAxis: { type: "category", data: gen.map((d) => d[0]), ...EJE_BASE },
     series: [{
-      type: "radar",
-      areaStyle: { color: "rgba(111,224,208,0.25)" },
-      lineStyle: { color: "#6fe0d0", width: 2 },
-      itemStyle: { color: "#6fe0d0" },
-      data: [{ value: ENCUESTA.p4.valores, name: "Importancia media" }],
+      type: "bar",
+      data: gen.map((d, i) => ({ value: d[1], itemStyle: { color: PALETA[i % PALETA.length], borderRadius: [0, 6, 6, 0] } })),
+      label: { show: true, position: "right", color: "#9aa39c" },
+      barCategoryGap: "30%",
+    }],
+  });
+
+  // Top canciones mejor calificadas — barras horizontales (promedio 0–5)
+  const top = [...s.top_canciones].reverse();
+  estado.graficos.p5 = estado.graficos.p5 || echarts.init(document.getElementById("chart-poll-5"));
+  estado.graficos.p5.setOption({
+    grid: { left: 150, right: 48, top: 14, bottom: 26 },
+    tooltip: {
+      ...TOOLTIP,
+      trigger: "item",
+      formatter: (p) => {
+        const c = top[p.dataIndex];
+        return `<strong>${c.cancion}</strong><br>${c.artista}<br><span style="color:#9aa39c">Promedio ${c.avg.toFixed(2)} · ${c.conocen} la conocen</span>`;
+      },
+    },
+    xAxis: { type: "value", min: 0, max: 5, ...EJE_BASE },
+    yAxis: { type: "category", data: top.map((c) => c.cancion), ...EJE_BASE, axisLabel: { ...EJE_BASE.axisLabel, width: 140, overflow: "truncate" } },
+    series: [{
+      type: "bar",
+      data: top.map((c) => c.avg),
+      itemStyle: { color: { type: "linear", x: 0, y: 0, x2: 1, y2: 0, colorStops: [{ offset: 0, color: "#6fe0d0" }, { offset: 1, color: "#1ed760" }] }, borderRadius: [0, 6, 6, 0] },
+      label: { show: true, position: "right", color: "#9aa39c", formatter: (p) => Number(p.value).toFixed(2) },
+      barCategoryGap: "32%",
     }],
   });
 }
