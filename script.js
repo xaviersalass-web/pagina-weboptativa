@@ -91,6 +91,28 @@ function pintarInsights() {
 }
 
 // =========================================================
+// Insights del dashboard: en táctil se abren con un toque
+// (en desktop el hover/foco ya los revela)
+// =========================================================
+function inicializarInsights() {
+  if (!window.matchMedia || !window.matchMedia("(hover: none)").matches) return;
+  const cards = document.querySelectorAll(".tarjeta[data-insight]");
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const yaAbierto = card.classList.contains("abierto");
+      cards.forEach((c) => c.classList.remove("abierto"));
+      if (!yaAbierto) card.classList.add("abierto");
+    });
+  });
+  // Tocar fuera de cualquier tarjeta cierra el insight abierto
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".tarjeta[data-insight]")) {
+      cards.forEach((c) => c.classList.remove("abierto"));
+    }
+  });
+}
+
+// =========================================================
 // Tabs + smooth scroll
 // =========================================================
 function activarVista(vista) {
@@ -736,6 +758,7 @@ window.addEventListener("resize", () => {
 async function boot() {
   inicializarNavegacion();
   inicializarToggleDataset();
+  inicializarInsights();
   inicializarQuiz();
   await cargarDatos();
   renderDashboard();

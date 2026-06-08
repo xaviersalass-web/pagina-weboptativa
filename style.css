@@ -294,18 +294,16 @@ h1 em {
 .tabs {
   position: sticky;
   top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 50;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 0.25rem;
   padding: 0.4rem;
   border-radius: 999px;
   margin: 0 auto 2.5rem;
-  display: flex;
   width: fit-content;
-  left: 50%;
-  transform: translateX(-50%);
-  position: sticky;
 }
 
 .tab {
@@ -629,33 +627,50 @@ h1 em {
 }
 
 /* =========================================================
-   Hover insight overlay para cada tarjeta de chart
+   Insight que se DESPLIEGA debajo de la gráfica
+   (la gráfica nunca se tapa; las tarjetas vecinas no se mueven)
    ========================================================= */
-.tarjeta { position: relative; }
+.tarjeta { position: relative; overflow: visible; }
 
 .tarjeta .insight-overlay {
   position: absolute;
-  inset: 0;
-  padding: 1.75rem;
+  top: calc(100% - 12px);
+  left: 0;
+  right: 0;
+  padding: 1.5rem 1.6rem 1.65rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  gap: 0.85rem;
-  border-radius: inherit;
+  gap: 0.7rem;
+  border: 1px solid var(--glass-border);
+  border-top: 0;
+  border-radius: 0 0 var(--radio) var(--radio);
   background:
-    linear-gradient(180deg, rgba(0,0,0,0.0) 30%, rgba(0,0,0,0.78) 70%, rgba(0,0,0,0.92) 100%),
-    radial-gradient(ellipse at 50% 100%, rgba(30,215,96,0.18), transparent 70%);
+    linear-gradient(180deg, rgba(12,18,16,0.97), rgba(8,13,12,0.99)),
+    radial-gradient(130% 90% at 50% 0%, rgba(30,215,96,0.16), transparent 72%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  box-shadow: 0 34px 60px rgba(0,0,0,0.62);
   opacity: 0;
-  transform: translateY(8px);
-  transition: opacity var(--t-suave), transform var(--t-suave);
+  visibility: hidden;
+  transform: translateY(-12px) scaleY(0.98);
+  transform-origin: top center;
+  transition: opacity var(--t-suave), transform var(--t-suave), visibility var(--t-suave);
   pointer-events: none;
-  z-index: 4;
+  z-index: 6;
 }
 
+/* Al revelar el insight, la tarjeta se eleva por encima de sus vecinas */
+.tarjeta:hover,
+.tarjeta:focus-within,
+.tarjeta.abierto { z-index: 30; }
+
 .tarjeta:hover .insight-overlay,
-.tarjeta:focus-within .insight-overlay {
+.tarjeta:focus-within .insight-overlay,
+.tarjeta.abierto .insight-overlay {
   opacity: 1;
-  transform: translateY(0);
+  visibility: visible;
+  transform: translateY(0) scaleY(1);
+  pointer-events: auto;
 }
 
 .insight-overlay .ins-stat {
@@ -701,7 +716,7 @@ h1 em {
 }
 
 .tarjeta::after {
-  content: "ⓘ Hover para el insight";
+  content: "ⓘ Pasa el cursor para el dato";
   position: absolute;
   top: 1rem;
   right: 1.2rem;
@@ -713,7 +728,13 @@ h1 em {
   pointer-events: none;
   z-index: 3;
 }
-.tarjeta:hover::after { opacity: 0; }
+.tarjeta:hover::after,
+.tarjeta:focus-within::after,
+.tarjeta.abierto::after { opacity: 0; }
+
+@media (hover: none) {
+  .tarjeta::after { content: "Toca para ver el dato"; }
+}
 
 /* =========================================================
    Cerebro sonoro (red Obsidian-style)
