@@ -57,7 +57,6 @@ async function cargarDatos() {
   estado.insights = insights;
   estado.network = network;
   pintarStats();
-  pintarInsights();
 }
 
 function pintarStats() {
@@ -75,10 +74,111 @@ function pintarStats() {
   document.getElementById("stat-generos").textContent = generos.size;
 }
 
-function pintarInsights() {
+// Calcula los insights desde el MISMO array de canciones que alimenta las
+// gráficas, así el texto del hover siempre coincide con lo que se ve y se
+// actualiza al cambiar de dataset (A / B / Ambos).
+function calcularInsights(songs) {
+  const ins = {};
+  const r1 = (n) => Math.round(n * 10) / 10;
+  const cap = (s) => (s || "").replace(/\b\w/g, (m) => m.toUpperCase());
+
+  // chart-line: popularidad media por año
+  const lineData = popPorAnio(songs);
+  if (lineData.length) {
+    const [y0, start] = lineData[0];
+    const [y1, end] = lineData[lineData.length - 1];
+    let peak = lineData[0], low = lineData[0];
+    lineData.forEach((d) => { if (d[1] > peak[1]) peak = d; if (d[1] < low[1]) low = d; });
+    const delta = start ? r1((end - start) / start * 100) : 0;
+    ins["chart-line"] = {
+      stat: `${delta >= 0 ? "+" : ""}${delta}% en ${y1 - y0} años`,
+      headline: `La popularidad media pasó de ${start} a ${end} entre ${y0} y ${y1}.`,
+      detail: `El pico se alcanzó en ${peak[0]} (${peak[1]} de popularidad media) y el valle en ${low[0]} (${low[1]}).`,
+      extra: [`Pico: ${peak[0]} (${peak[1]})`, `Valle: ${low[0]} (${low[1]})`, `${lineData.length} años con datos`],
+    };
+  }
+
+  // chart-genre: top géneros
+  const cnt = {};
+  songs.forEach((s) => (s.genre || []).forEach((g) => (cnt[g] = (cnt[g] || 0) + 1)));
+  const gen = Object.entries(cnt).sort((a, b) => b[1] - a[1]);
+  if (gen.length) {
+    const total = gen.reduce((a, [, c]) => a + c, 0);
+    const top3 = gen.slice(0, 3);
+    const [leader, leaderN] = gen[0];
+    const share = r1(leaderN / total * 100);
+    const top3pct = r1(top3.reduce((a, [, c]) => a + c, 0) / total * 100);
+    ins["chart-genre"] = {
+      stat: `${cap(leader)} ${share}%`,
+      headline: `${cap(leader)} domina con el ${share}% del catálogo.`,
+      detail: `De ${gen.length} géneros etiquetados, los 3 primeros — ${top3.map(([g]) => g).join(", ")} — concentran ${top3pct}% de las canciones.`,
+      extra: top3.map(([g, c]) => `${cap(g)}: ${r1(c / total * 100)}%`),
+    };
+  }
+
+  // chart-scatter: cuadrantes energía × valencia
+  const q = { ap: 0, an: 0, bp: 0, bn: 0 };
+  let qt = 0;
+  songs.forEach((s) => {
+    const e = s.energy, v = s.valence;
+    if (typeof e !== "number" || typeof v !== "number") return;
+    qt++;
+    if (e >= 0.5 && v >= 0.5) q.ap++;
+    else if (e >= 0.5 && v < 0.5) q.an++;
+    else if (e < 0.5 && v >= 0.5) q.bp++;
+    else q.bn++;
+  });
+  if (qt) {
+    const names = { ap: "Fiesta (alta energía + brillo)", an: "Furia (alta energía + oscura)", bp: "Calma feliz (baja energía + brillo)", bn: "Melancolía (baja energía + oscura)" };
+    const [lk, lv] = Object.entries(q).sort((a, b) => b[1] - a[1])[0];
+    const lpct = r1(lv / qt * 100);
+    ins["chart-scatter"] = {
+      stat: `${lpct}% en el cuadrante dominante`,
+      headline: `${names[lk]} es el cuadrante más poblado (${lpct}%).`,
+      detail: `Cruzando energía con valencia: la mayoría de los hits aterriza en ${names[lk].toLowerCase()}. Dance/pop arriba, indie/balada abajo.`,
+      extra: [`Fiesta: ${r1(q.ap / qt * 100)}%`, `Melancolía: ${r1(q.bn / qt * 100)}%`, `Calma feliz: ${r1(q.bp / qt * 100)}%`],
+    };
+  }
+
+  // chart-radar: promedio de rasgos
+  const rasgos = promedioRasgos(songs).filter((r) => !Number.isNaN(r[1]));
+  if (rasgos.length) {
+    const es = { danceability: "bailabilidad", energy: "energía", valence: "valencia", acousticness: "acústica", speechiness: "voz hablada", liveness: "directo" };
+    let top = rasgos[0], bot = rasgos[0];
+    rasgos.forEach((r) => { if (r[1] > top[1]) top = r; if (r[1] < bot[1]) bot = r; });
+    ins["chart-radar"] = {
+      stat: `${cap(es[top[0]])} ${top[1].toFixed(2)}`,
+      headline: `El hit promedio: alta ${es[top[0]]} (${top[1].toFixed(2)}), baja ${es[bot[0]]} (${bot[1].toFixed(2)}).`,
+      detail: `El perfil sonoro típico favorece producciones enérgicas y bailables sobre lo acústico o íntimo.`,
+      extra: rasgos.slice(0, 3).map(([k, v]) => `${cap(es[k])}: ${v.toFixed(2)}`),
+    };
+  }
+
+  // chart-tempo
+  const tempos = songs.map((s) => s.tempo).filter((v) => typeof v === "number");
+  if (tempos.length) {
+    const avg = r1(tempos.reduce((a, b) => a + b, 0) / tempos.length);
+    const rangos = [[60, 90, "Lento"], [90, 110, "Medio"], [110, 130, "Movido"], [130, 160, "Rápido"], [160, 220, "Muy rápido"]];
+    const counts = rangos.map(([lo, hi, name]) => [name, tempos.filter((t) => t >= lo && t < hi).length, lo, hi]);
+    let leader = counts[0];
+    counts.forEach((c) => { if (c[1] > leader[1]) leader = c; });
+    const pct = r1(leader[1] / tempos.length * 100);
+    ins["chart-tempo"] = {
+      stat: `${avg} BPM promedio`,
+      headline: `El ${pct}% de los hits viven en el rango ${leader[2]}-${leader[3]} BPM (${leader[0].toLowerCase()}).`,
+      detail: `El tempo promedio es ${avg} BPM. La mayoría se concentra en la zona pop comercial.`,
+      extra: counts.slice(0, 3).map(([n, c]) => `${n}: ${c} canciones`),
+    };
+  }
+
+  return ins;
+}
+
+function pintarInsights(songs) {
+  const insights = calcularInsights(songs || estado.activos);
   document.querySelectorAll(".tarjeta[data-insight]").forEach((card) => {
     const id = card.dataset.insight;
-    const ins = estado.insights[id];
+    const ins = insights[id];
     const overlay = card.querySelector(".insight-overlay");
     if (!ins || !overlay) return;
     overlay.innerHTML = `
@@ -309,6 +409,9 @@ function renderDashboard() {
       barCategoryGap: "12%",
     }],
   });
+
+  // Insights calculados desde el MISMO dataset que se grafica → siempre coinciden
+  pintarInsights(songs);
 }
 
 // =========================================================
