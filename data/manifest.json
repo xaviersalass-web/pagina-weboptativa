@@ -2,7 +2,7 @@
   "set_a": {
     "file": "songs_a.json",
     "label": "Dataset A",
-    "count": 2000,
+    "count": 200,
     "year_min": 2000,
     "year_max": 2019
   },

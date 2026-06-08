@@ -582,7 +582,7 @@ function explicacion(match, pq) {
   if (pq.matchG && respuestas.genre)
     partes.push(`además pertenece al género que pediste (<strong>${respuestas.genre}</strong>)`);
   if (partes.length === 0)
-    partes.push(`es el mejor compromiso entre tus 5 respuestas según la distancia ponderada en el espacio de 4.000 canciones`);
+    partes.push(`es el mejor compromiso entre tus 5 respuestas según la distancia ponderada en el espacio de 2.000 canciones`);
   return `Elegida porque ${partes.join("; ")}.`;
 }
 

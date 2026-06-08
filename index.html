@@ -25,6 +25,7 @@
           <a href="#encuesta" data-tab="encuesta">Encuesta</a>
           <a href="#quiz" data-tab="quiz">Quiz</a>
           <a href="#cerebro" data-tab="cerebro">Cerebro</a>
+          <a href="#codigo" data-tab="codigo">Código</a>
         </div>
         <a class="spotify-badge" href="https://developer.spotify.com/documentation/web-api" target="_blank" rel="noopener" title="Datos oficiales de Spotify Web API">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.561.3z"/></svg>
@@ -61,6 +62,7 @@
           <button role="tab" class="tab" data-vista="encuesta" id="tab-encuesta">Encuesta</button>
           <button role="tab" class="tab" data-vista="quiz" id="tab-quiz">Quiz · Recomendación</button>
           <button role="tab" class="tab" data-vista="cerebro" id="tab-cerebro">Cerebro sonoro</button>
+          <button role="tab" class="tab" data-vista="codigo" id="tab-codigo">Cómo está hecho</button>
           <span class="tab-indicador" aria-hidden="true"></span>
         </div>
 
@@ -152,7 +154,7 @@
             <div>
               <p class="kicker">Sección 03</p>
               <h2>Tu canción, en 5 preguntas</h2>
-              <p class="lead">Cada respuesta ajusta un vector sonoro. Comparamos con las 4.000 canciones y te devolvemos la más cercana.</p>
+              <p class="lead">Cada respuesta ajusta un vector sonoro. Comparamos con las 2.000 canciones del catálogo y te devolvemos la más cercana.</p>
             </div>
           </header>
 
@@ -232,6 +234,165 @@
             <div class="brain-ayuda">
               <kbd>Drag</kbd> mover · <kbd>Scroll</kbd> zoom · <kbd>Hover</kbd> vecindario
             </div>
+          </div>
+        </section>
+
+        <!-- CÓDIGO / BACKEND -->
+        <section id="codigo" class="vista" aria-labelledby="tab-codigo" hidden>
+          <header class="vista-header">
+            <div>
+              <p class="kicker">Sección 05 · bajo el capó</p>
+              <h2>Cómo está hecho</h2>
+              <p class="lead">De dos planillas crudas a un sitio interactivo: un pipeline de datos en Python que precomputa todo, y un frontend sin frameworks que lo dibuja con ECharts.</p>
+            </div>
+            <span class="badge glass">~2.300 líneas · 100% estático</span>
+          </header>
+
+          <!-- Hipótesis -->
+          <article class="hipotesis glass">
+            <p class="kicker">Hipótesis del proyecto</p>
+            <h3>¿Se puede recomendar música midiendo la cercanía entre tu gusto y el sonido de cada canción?</h3>
+            <div class="hipo-principal">
+              <span class="hipo-tag tag-h1">H₁ · principal</span>
+              <p>El gusto musical de una persona puede representarse como un <strong>perfil de características de audio</strong> (energía, bailabilidad, valencia, tempo y género). Las canciones cuyo perfil sonoro está <strong>más cerca</strong> de ese gusto reciben calificaciones más altas — y por eso se las puede recomendar midiendo esa cercanía, <strong>sin conocer el historial de escucha</strong>.</p>
+            </div>
+            <div class="hipo-extra">
+              <div class="hipo-item">
+                <span class="hipo-tag tag-h0">H₀ · nula</span>
+                <p>No hay relación entre las características de audio y el gusto: la cercanía sonora no predice las calificaciones.</p>
+              </div>
+              <div class="hipo-item">
+                <span class="hipo-tag tag-h2">H₂ · secundaria</span>
+                <p>Las preferencias varían según la edad, el género y la ocupación de la persona.</p>
+              </div>
+            </div>
+            <p class="hipo-foot">Comprobable con la encuesta: <strong>30 personas</strong> calificaron <strong>30 canciones</strong> (escala 0–5). Para cada una se calcula su perfil preferido y se contrasta la cercanía sonora con sus calificaciones reales.</p>
+          </article>
+
+          <!-- Flujo de datos -->
+          <div class="flujo">
+            <article class="flujo-paso glass">
+              <span class="flujo-num">01 · Fuentes</span>
+              <h4>Datos crudos</h4>
+              <p>CSV + XLSX con dos datasets — 200 y 2.000 canciones — y sus <em>audio features</em> de Spotify.</p>
+              <code>DataBase 200 songs.csv · Base de datos 2000 canciones.xlsx</code>
+            </article>
+            <span class="flujo-flecha" aria-hidden="true">→</span>
+            <article class="flujo-paso glass">
+              <span class="flujo-num">02 · Backend</span>
+              <h4>Python</h4>
+              <p><code>convert_datasets.py</code> normaliza y <code>analyze.py</code> calcula insights y la red.</p>
+              <code>openpyxl · csv · json</code>
+            </article>
+            <span class="flujo-flecha" aria-hidden="true">→</span>
+            <article class="flujo-paso glass">
+              <span class="flujo-num">03 · Salida</span>
+              <h4>JSON estático</h4>
+              <p>5 archivos precomputados: canciones, manifest, insights y network.</p>
+              <code>songs_a · songs_b · insights · network · manifest</code>
+            </article>
+            <span class="flujo-flecha" aria-hidden="true">→</span>
+            <article class="flujo-paso glass">
+              <span class="flujo-num">04 · Frontend</span>
+              <h4>Navegador</h4>
+              <p>Vanilla JS hace <code>fetch</code> en paralelo y ECharts dibuja todo en vivo.</p>
+              <code>ECharts 5.5 · sin frameworks</code>
+            </article>
+          </div>
+
+          <div class="codigo-grid">
+            <!-- Composición del repositorio -->
+            <article class="codigo-card amplia glass">
+              <header class="cc-head">
+                <h3>Composición del repositorio</h3>
+                <p>Lenguajes del proyecto según GitHub.</p>
+              </header>
+              <div class="lang-bar" role="img" aria-label="JavaScript 36.7%, CSS 27.3%, HTML 18.5%, Python 17.5%">
+                <span style="flex:36.7; background:#f1e05a"></span>
+                <span style="flex:27.3; background:#a371f7"></span>
+                <span style="flex:18.5; background:#ef5340"></span>
+                <span style="flex:17.5; background:#4b9fea"></span>
+              </div>
+              <div class="lang-legend">
+                <div class="li"><span class="dot" style="background:#f1e05a"></span><strong>JavaScript</strong><span class="pct">36.7%</span></div>
+                <div class="li"><span class="dot" style="background:#a371f7"></span><strong>CSS</strong><span class="pct">27.3%</span></div>
+                <div class="li"><span class="dot" style="background:#ef5340"></span><strong>HTML</strong><span class="pct">18.5%</span></div>
+                <div class="li"><span class="dot" style="background:#4b9fea"></span><strong>Python</strong><span class="pct">17.5%</span></div>
+              </div>
+              <p class="cc-foot">El grueso es lógica de interfaz (JS) y diseño (CSS); el Python es el motor de datos que corre antes del deploy.</p>
+            </article>
+
+            <!-- Backend Python -->
+            <article class="codigo-card glass">
+              <header class="cc-head"><h3>El backend en Python</h3><p>Un pipeline de build, no un servidor.</p></header>
+              <ul class="cc-list">
+                <li><code>convert_datasets.py</code> — lee el CSV y el XLSX, normaliza tipos (números, géneros → lista, <em>explicit</em> → booleano) y <strong>deduplica</strong> el Dataset A (el CSV traía cada canción repetida ~10×) hasta sus <strong>200 canciones reales</strong>. Escribe <code>songs_a/b.json</code> + <code>manifest.json</code>.</li>
+                <li><code>analyze.py</code> — deduplica por artista + canción (se queda con la más popular), calcula los 5 insights y arma la red estilo Obsidian.</li>
+                <li>La red enlaza géneros → artistas → canciones, y cada canción con sus <strong>2 vecinos más cercanos</strong> por distancia euclídea: <strong>132 nodos · 247 enlaces</strong>.</li>
+              </ul>
+            </article>
+
+            <!-- Frontend -->
+            <article class="codigo-card glass">
+              <header class="cc-head"><h3>El frontend</h3><p>Vanilla JS, cero frameworks.</p></header>
+              <ul class="cc-list">
+                <li>~770 líneas de JavaScript que cargan los 5 JSON con <code>fetch</code> en paralelo (<code>Promise.all</code>).</li>
+                <li><strong>ECharts 5.5</strong> dibuja todo: línea, torta, dispersión, radar, barras y el grafo de fuerza del «cerebro sonoro».</li>
+                <li>Diseño <em>liquid glass</em> sobre tema Spotify-dark, 100% CSS (sin librerías de UI).</li>
+              </ul>
+            </article>
+
+            <!-- Algoritmo -->
+            <article class="codigo-card amplia glass">
+              <header class="cc-head"><h3>El recomendador del quiz</h3><p>Corre entero en tu navegador — sin llamadas a ningún servidor.</p></header>
+              <p class="cc-text">Tus 5 respuestas forman un vector sonoro. Lo comparamos contra las 2.000 canciones del catálogo con una <strong>distancia euclídea ponderada</strong> y devolvemos la más cercana:</p>
+              <pre class="code-block"><code>d = 1.2·(Δbailabilidad)²  +  1.2·(Δenergía)²
+  + 1.0·(Δvalencia)²     +  0.6·(Δtempo / 100)²
+  + 1.5·(género no coincide ? 0.6 : 0)
+
+match = argmin(d)        // la canción con menor distancia</code></pre>
+              <p class="cc-foot">Los pesos (1.2, 1.2, 1.0, 0.6, 1.5) priorizan baile, energía y género por sobre el tempo.</p>
+
+              <div class="explica-simple">
+                <p class="es-titulo">🎯 La misma idea, en simple</p>
+                <p class="es-intro">Pensá cada canción como un punto en un mapa. Tus 5 respuestas marcan <strong>tu punto</strong>. La fórmula es como una regla que mide qué tan lejos está cada canción de vos — y te devuelve la más cercana.</p>
+                <ol class="es-pasos">
+                  <li><strong>Traducimos tus gustos a números.</strong> Cada respuesta (cuánto baile, cuánta energía, qué ánimo…) se convierte en un valor.</li>
+                  <li><strong>Comparamos con cada canción.</strong> A las 2.000 les restamos tus números: cuanto menor la diferencia, más se parecen a lo que pediste.</li>
+                  <li><strong>Lo que más te importa pesa más.</strong> Baile, energía y género empujan más la balanza que el tempo.</li>
+                  <li><strong>Gana la más cercana.</strong> La canción con la diferencia total más chica es tu match.</li>
+                </ol>
+              </div>
+            </article>
+
+            <!-- Stack -->
+            <article class="codigo-card glass">
+              <header class="cc-head"><h3>Stack</h3><p>Lo que mueve el proyecto.</p></header>
+              <div class="stack-chips">
+                <span>Python 3</span>
+                <span>openpyxl</span>
+                <span>JSON</span>
+                <span>JavaScript ES6</span>
+                <span>ECharts 5.5</span>
+                <span>HTML5</span>
+                <span>CSS glassmorphism</span>
+                <span>Spotify Web API</span>
+                <span>Sitio estático</span>
+              </div>
+            </article>
+
+            <!-- En números -->
+            <article class="codigo-card glass">
+              <header class="cc-head"><h3>En números</h3><p>El proyecto de un vistazo.</p></header>
+              <div class="cc-stats">
+                <div><strong>200</strong><span>Dataset A · canciones</span></div>
+                <div><strong>2.000</strong><span>Dataset B · canciones</span></div>
+                <div><strong>5</strong><span>JSON precomputados</span></div>
+                <div><strong>132</strong><span>nodos en la red</span></div>
+                <div><strong>~2.300</strong><span>líneas de código</span></div>
+                <div><strong>0</strong><span>servidores en runtime</span></div>
+              </div>
+            </article>
           </div>
         </section>
       </section>

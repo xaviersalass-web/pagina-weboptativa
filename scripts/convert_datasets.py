@@ -53,6 +53,25 @@ def from_xlsx(path: Path, sheet: str = "Base de datos"):
     return out
 
 
+def dedup(songs):
+    """Colapsa filas repetidas (mismo artista|canción) y se queda con la más popular.
+
+    El CSV "DataBase 200 songs" trae cada canción repetida ~10 veces, lo que
+    inflaba el dataset a 2000 filas cuando en realidad son ~200 canciones únicas.
+    """
+    seen = {}
+    for s in songs:
+        artist = (s.get("artist") or "").strip().lower()
+        title = (s.get("song") or "").strip().lower()
+        if not artist or not title:
+            continue
+        key = f"{artist}|{title}"
+        prev = seen.get(key)
+        if prev is None or (s.get("popularity") or 0) > (prev.get("popularity") or 0):
+            seen[key] = s
+    return list(seen.values())
+
+
 def summarize(songs):
     years = [s["year"] for s in songs if s.get("year")]
     return {
@@ -63,8 +82,8 @@ def summarize(songs):
 
 
 def main():
-    set_a = from_csv(ROOT / "DataBase 200 songs.csv")
-    set_b = from_xlsx(ROOT / "Base de datos 2000 canciones.xlsx")
+    set_a = dedup(from_csv(ROOT / "DataBase 200 songs.csv"))  # ~200 canciones únicas
+    set_b = from_xlsx(ROOT / "Base de datos 2000 canciones.xlsx")  # ~2000 canciones
 
     (OUT / "songs_a.json").write_text(json.dumps(set_a, ensure_ascii=False), encoding="utf-8")
     (OUT / "songs_b.json").write_text(json.dumps(set_b, ensure_ascii=False), encoding="utf-8")
